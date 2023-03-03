@@ -1,0 +1,58 @@
+header{
+    background-color: #337AA6;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.right-side{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    height: 50px;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+}
+nav ul li{
+    margin-right: 25px;
+}
+nav ul li a {
+    color: black;
+    padding: 14px;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+}
+#products{
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+}
+.links ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+
+}
+.links ul li{
+    margin-left: 20px;
+}
+.links ul li a{
+    color: black;
+    padding: 10px;
+}
+.container-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section{
+    font-size: 45px;
+    margin-top: 50px;
+}
