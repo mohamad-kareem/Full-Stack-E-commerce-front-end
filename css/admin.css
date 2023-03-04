@@ -50,6 +50,7 @@ body{
     justify-content: space-between;
     padding: 30px 50px;
     border: 3px solid black;
+    box-sizing: content-box;
 }
 
 .List-name-and-controls{
@@ -74,4 +75,27 @@ body{
     border-radius: 5px;
     padding: 7px;
     margin-right: 10px;
+}
+
+.Table-list{
+    /* display: block; */
+    height: 70vh;
+    overflow-y: scroll;
+    width: 90%;
+    margin: 15px 60px;
+}
+
+.The-actual-list{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,td{
+    border: 1px solid #dddddd;
+    padding: 10px;
+    text-align: left;
+}
+
+tr:nth-child(even){
+    background-color: #dddddd;
 }
