@@ -14,7 +14,6 @@ select{
     font-weight: 600;
 }
 
-
 nav {
     display: flex;
     align-items: center;
@@ -61,3 +60,23 @@ nav {
     text-decoration: none;
     margin-left: 20px;
 }
+
+
+.Login-block{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+
+
+.Login-description{
+    max-width: 300px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
