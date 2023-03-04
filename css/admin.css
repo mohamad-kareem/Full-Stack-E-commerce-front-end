@@ -6,7 +6,6 @@ body{
 
 .Container{
     display: flex;
-
 }
 
 .Control-panel-options{
@@ -30,6 +29,7 @@ body{
 
 .List{
     padding: 15px;
+    transition: 0.4s;
 }
 
 .List:hover{
@@ -40,5 +40,14 @@ body{
 .Control-panel-info{
     width: 80%;
     height: 100vh;
-    background-color: beige;
 }
+
+
+.Nav-bar{
+    background-color: #337AA6;
+    color: #132B40;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 50px;
+}
+
