@@ -1,16 +1,25 @@
 
+
 body{
     font-family: "Roboto";
+    margin: 0;
 }
 header{
     background-color: #337AA6;
-    color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+
     
 }
+.links{
+    margin-right: 20px;
+}
+.links a{
+    font-size: 30px;
+  }
+
 .right-side{
     display: flex;
     align-items: center;
@@ -26,7 +35,7 @@ nav ul li{
     margin-right: 25px;
 }
 nav ul li a {
-    color: black;
+    color: white;
     padding: 14px;
     font-size: 30px;
     font-weight: bold;
@@ -36,7 +45,7 @@ nav ul li a {
     background: none;
     border: none;
     font-size: 30px;
-    color: black;
+    color: white;
     font-weight: bold;
 }
 .links ul{
@@ -61,25 +70,18 @@ nav ul li a {
     font-size: 45px;
     margin-top: 50px;
 }
-.left-navbar{
- margin-left: 50px;
- margin-top: 10px;
- width: 20%;
- float: left;
- border: 2px solid black;
- padding: 10px;
- height: 500px;
- 
-}
-.left-navbar h2{
-    margin-left: 20%;
-    
-}
-    
-input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-    
+.checkbox-container {
+    border: 2px solid black;
+    padding:30px;
+    width: 150px;
+    height: 300px;
+    margin-left:10px;
+    margin-right: 20px;
+    margin-top:50px;
+  }
+
+  .checkbox-container h2{
+    text-align: center;
   }
   .wrapping-navbar-showroom{
     display: flex;
