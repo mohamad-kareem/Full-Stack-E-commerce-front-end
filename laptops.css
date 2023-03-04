@@ -1,5 +1,7 @@
 
-
+body{
+    font-family: "Roboto";
+}
 header{
     background-color: #337AA6;
     color: black;
@@ -7,6 +9,7 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    
 }
 .right-side{
     display: flex;
@@ -76,12 +79,16 @@ nav ul li a {
 input[type="checkbox"] {
     width: 20px;
     height: 20px;
-    border-width: 2px;
+    
   }
   .wrapping-navbar-showroom{
     display: flex;
     
   }
+.wrapping-navbar-showroom{
+    margin-top: 110px;
+}
+
   .wrapping-navbar-showroom .container-showroom{
     margin-left: 50px;
     display: flex;
