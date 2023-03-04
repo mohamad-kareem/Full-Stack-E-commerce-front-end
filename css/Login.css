@@ -1,0 +1,115 @@
+body{
+    margin:0px;
+    padding: 0px;
+    font-family: "Roboto";
+}
+select{
+    width:200px;
+    border-radius: 20px;
+    text-align: center;
+    padding:5px;
+    background-color: #337AA6;
+    border-color: #337AA6;
+    color: white;
+    font-weight: 600;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #337AA6;
+    color: #fff;
+    width:100%;
+    margin:0px;
+}
+
+.navbar-left{
+    display: flex;
+}
+
+.navbar-logo img {
+    height: 50px;
+    margin-right:70px;
+    padding:20px;
+}
+
+.navbar-links {
+    display: flex;
+    list-style: none;
+    margin: 10px;
+    padding: 0;
+}
+
+.navbar-links li {
+    /* margin-right: 20px; */
+    text-decoration: none;
+}
+
+.navbar-links a {
+    color: #fff;
+    text-decoration: none;
+    /* margin-right: 50px; */
+    align-items: center;
+}
+
+.navbar-icons {
+    display: flex;
+    margin-right:50px;
+    list-style: none;
+}
+
+.navbar-icons a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+
+.Login-block{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.Login-title{
+    font-size: 50px;
+}
+
+
+.Login-description{
+    max-width: 500px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+#Email, #Password  {
+    border: 0;
+    border-bottom: 2px solid black;
+    width: 30%;
+    height: 50px;
+    margin-top: 50px;
+}
+
+.Pointing-to-forgetpassword{
+    width: 30%;
+    font-size: 12px;
+    text-align: right;
+}
+
+.Signin-button{
+    background-color: #337AA6;
+    margin-top: 50px;
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
