@@ -1,0 +1,111 @@
+body{
+    margin:0px;
+    padding: 0px;
+    font-family: "Roboto";
+}
+select{
+    width:200px;
+    border-radius: 20px;
+    text-align: center;
+    padding:5px;
+    background-color: #337AA6;
+    border-color: #337AA6;
+    color: white;
+    font-weight: 600;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #337AA6;
+    color: #fff;
+    width:100%;
+    margin:0px;
+}
+
+.navbar-left{
+    display: flex;
+}
+
+.navbar-logo img {
+    height: 50px;
+    margin-right:70px;
+    padding:20px;
+}
+
+.navbar-links {
+    display: flex;
+    list-style: none;
+    margin: 10px;
+    padding: 0;
+}
+
+.navbar-links li {
+    /* margin-right: 20px; */
+    text-decoration: none;
+}
+
+.navbar-links a {
+    color: #fff;
+    text-decoration: none;
+    /* margin-right: 50px; */
+    align-items: center;
+}
+
+.navbar-icons {
+    display: flex;
+    margin-right:50px;
+    list-style: none;
+}
+
+.navbar-icons a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.Main-body{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 70px;
+}
+
+.Control-panel{
+    /* width: 10%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 0;
+    margin-left: 40px;
+    /* gap: 30px; */
+}
+
+.Account-information-block{
+    width: 70%;
+}
+
+.Info{
+    display: flex;
+    justify-content: start;
+    width: 100%;
+}
+
+.Account-info{
+    width: 43%;
+}
+
+.Welcome{
+    margin-bottom: 30px;
+}
+
+
+.Info-sub-block > div{
+    margin-bottom: 10px;
+}
+
+.Info-title{
+    margin-bottom: 30px;
+}

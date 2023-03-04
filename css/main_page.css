@@ -1,0 +1,104 @@
+body{
+  font-family: Roboto;
+  color: #132B40;
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  background-color: #337AA6;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1% 4%;
+}
+
+img {
+  margin-top: 2%;
+}
+
+.right {
+  display: flex;
+  text-align: center;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+#dropdown {
+  color: #132B40;
+  border: none;
+  font-size: 1rem;
+  border-radius: 10px;
+  width: 200px;
+  padding: 5px 5px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  font-family: Roboto;
+  justify-content: center;
+}
+
+option {
+  cursor: pointer;
+  background-color: white;
+  font-weight: bold;
+  font-family: Roboto;
+  font-size: 0.9rem;
+}
+
+.left {
+  display: flex;
+  text-align: center;
+  gap: 30px;
+  justify-content: center;
+}
+
+#home {
+  margin-top: 2px;
+}
+
+#slideshow {
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+}
+
+#slideshow img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+#slideshow img:first-child {
+  opacity: 1;
+}
+.categories{
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 2%;
+  padding-right: 2%;
+  color: #132B40;
+}
+#computer,#accesorries,#phone{
+  width: 30%;
+}
+.sale{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 30px;
+}
+.float_picture{
+  width: 60%;
+}
+
+.sale_info{
+  display: flex;
+  flex-direction: column;
+}
+
