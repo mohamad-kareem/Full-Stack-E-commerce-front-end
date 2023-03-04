@@ -82,7 +82,7 @@ option {
   flex-wrap: wrap;
   padding-left: 2%;
   padding-right: 2%;
-  color: #132B40;
+  color: black;
   margin-top: 60px;
 }
 #computer,#accesorries,#phone{
@@ -96,18 +96,31 @@ option {
 .float_picture{
   width: 60%;
 }
-#addto, #view{color:  #337AA6; font-weight: bold;}
-.buttons{display:flex;justify-content: space-evenly; height: 10%; }
-button{display:flex;justify-content: space-between; align-items: center;}
-.computer_title, .phone_title, .acc_title{font-size: 20px; font-weight: bold;}
-.sale_info {width: 35%; margin-right: 10%;}
-.sale {display: flex;
+#addto, #view{
+  color: #337AA6; font-weight: bold;
+}
+.buttons{
+  display:flex;justify-content: space-evenly; height: 10%; 
+}
+button{
+  display:flex;justify-content: space-between; align-items: center;
+}
+.computer_title, .phone_title, .acc_title{
+  font-size: 20px; font-weight: bold; color:#132B40 ;
+}
+.sale_info {
+  width: 35%; margin-right: 10%;
+}
+.sale {
+  display: flex;
   justify-content: space-around;
 }
 
-
-#sale_desc{text-align: justify; line-height: 1.5;}
-#title_info {font-weight: bolder; font-size: larger ; color:#132B40 ; }
+#sale_desc{
+  text-align: justify; line-height: 1.1;color: black;
+}
+#title_info {
+  font-weight: bolder; font-size: larger ; color:#132B40 ; }
 @keyframes flash {
   0% { opacity: 1; }
   50% { opacity: 0; }
