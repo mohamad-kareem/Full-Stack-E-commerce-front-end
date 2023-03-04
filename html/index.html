@@ -12,13 +12,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Document</title>
 </head>
 
 <body>
   <div class="navbar">
     <div class="left">
-      <img id="logo" src="#">
+      <img id="logo" width=60px height=50px src="../images\logo.jpg">
       <a id="home">Home</a>
       <select id="dropdown">
         <option value="">Products</option>
@@ -28,9 +29,13 @@
       </select>
     </div>
     <div class="right">
-      <img id="favourites" src="#">
-      <img id="buy" src="#">
-      <img id="signup_in" src="#">
+      <div class="navbar-icons">
+        <ul>
+            <li><a href="#" class="fa fa-heart-o" style="color: white;"></a></li>
+            <li><a href="#" class="fa fa-shopping-cart" style="color: white;" ></a></li>
+            <li><a href="#" class="fa fa-user-circle-o"style="color: white;"></a></li>
+        </ul>
+      </div>
     </div>
   </div>
   <div id="slideshow">
@@ -65,7 +70,7 @@
       <img width="500px" height="400px" id="sale_img" src="../images\gaming.jpg">
     </div>
     <div class="sale_info">
-      <p id="title_info"><br><br>Featured <br>Very Awesome Computer<br><br></p>
+      <p id="title_info"><br>Featured <br>Very Awesome Computer<br><br></p>
       <div class="desc_float">
         <p id="sale_desc"> <strong>Titan GT77 HX</strong><br><br> For the user looking to venture beyond gaming. This Awesome Computer is built to 
           use components on the cutting edge of computers. Built to be as bold as beautiful, 
