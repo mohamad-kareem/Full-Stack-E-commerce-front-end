@@ -46,7 +46,26 @@ td button{
     border-radius: 15px;
     font-size: 15px;
 }
-
+td img{
+    width: 200px;
+    height: 200px;
+    margin-right: 50px;
+}
+.total-price{
+    display: flex;
+    justify-content: flex-end;
+}
+.total-price table{
+    border-top:3px solid #337AA6 ;
+    width: 100%;
+    max-width: 200px;
+}
+td:last-child{
+    text-align: right;
+}
+th:last-child{
+    text-align: right;
+}
 
 
 
