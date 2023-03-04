@@ -77,9 +77,10 @@ nav {
     /* width: 10%; */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
+    margin-top: 0;
     margin-left: 40px;
-    gap: 30px;
+    /* gap: 30px; */
 }
 
 .Account-information-block{
@@ -93,15 +94,16 @@ nav {
 }
 
 .Account-info{
-    width: 50%;
-}
-
-.Address{
-
+    width: 43%;
 }
 
 .Welcome{
     margin-bottom: 30px;
+}
+
+
+.Info-sub-block > div{
+    margin-bottom: 10px;
 }
 
 .Info-title{
