@@ -17,11 +17,16 @@ select{
 nav {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 10px;
     background-color: #337AA6;
     color: #fff;
     width:100%;
     margin:0px;
+}
+
+.navbar-left{
+    display: flex;
 }
 
 .navbar-logo img {
@@ -38,20 +43,20 @@ nav {
 }
 
 .navbar-links li {
-    margin-right: 20px;
+    /* margin-right: 20px; */
     text-decoration: none;
 }
 
 .navbar-links a {
     color: #fff;
     text-decoration: none;
-    margin-right: 50px;
+    /* margin-right: 50px; */
     align-items: center;
 }
 
 .navbar-icons {
     display: flex;
-    margin-left:600px;
+    margin-right:50px;
     list-style: none;
 }
 
