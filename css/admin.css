@@ -67,6 +67,8 @@ body{
 
 .List-name{
     padding-left: 30px;
+    font-size: 30px;
+    font-weight: 500;
 }
 
 .Buttons{
@@ -78,7 +80,6 @@ body{
 }
 
 .Table-list{
-    /* display: block; */
     height: 70vh;
     overflow-y: scroll;
     width: 90%;
