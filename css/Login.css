@@ -96,3 +96,20 @@ nav {
     margin-top: 50px;
 }
 
+.Pointing-to-forgetpassword{
+    width: 30%;
+    font-size: 12px;
+    text-align: right;
+}
+
+.Signin-button{
+    background-color: #337AA6;
+    margin-top: 50px;
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
