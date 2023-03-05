@@ -3,10 +3,14 @@ const category_list = document.getElementsByClassName("List-block");
 const user_list = document.getElementById("User-list");
 const phone_list = document.getElementById("Phone-list");
 const laptop_list = document.getElementById("Laptop-list");
-const add_user_button = document.getElementById("Add-user");
 const control_user_block = document.getElementById("Control-users-block");
 const control_users_title = document.getElementById("Control-users-title");
+const add_users_buttons = document.getElementsByClassName("Add-user");
 const add_users_block = document.getElementById("Add-users-block");
+const remove_users_buttons = document.getElementsByClassName("Remove-user");
+const remove_users_block = document.getElementById("Remove-users-block");
+const edit_users_buttons = document.getElementsByClassName("Edit-user");
+const edit_users_block = document.getElementById("Edit-users-block");
 
 for(let i=0; i< category_buttons.length; i++){
     category_buttons[i].addEventListener("click", () => {
@@ -139,20 +143,42 @@ const PrintLaptopInTable = (laptop) => {
 }
 
 const ButtonIsEnabled = (button) => !button.classList.contains("Off-button");
-const DisableButton = (button) => {
-    button.classList.add("Off-button");
-}
-const EnableButton = (button) => {
-    button.classList.remove("Off-button");
-}
 
 const ToggleAddUserInterface = () => {
-    if (ButtonIsEnabled(add_user_button)) {
-        DisableEveryTable();
-        control_user_block.classList.remove("List-disabled");
-        control_users_title.textContent = "Add User";
-        add_users_block.classList.remove("List-disabled");
-    }
+    DisableEveryTable();
+    control_user_block.classList.remove("List-disabled");
+    control_users_title.textContent = "Add User";
+    add_users_block.classList.remove("List-disabled");
+    edit_users_block.classList.add("List-disabled");
+    remove_users_block.classList.add("List-disabled");
 }
 
-add_user_button.addEventListener("click", ToggleAddUserInterface );
+const ToggleRemoveUserInterface = () => {
+        DisableEveryTable();
+        control_user_block.classList.remove("List-disabled");
+        control_users_title.textContent = "Remove User";
+        remove_users_block.classList.remove("List-disabled");
+        add_users_block.classList.add("List-disabled");
+        edit_users_block.classList.add("List-disabled");
+}
+
+const ToggleEditUserInterface = () => {
+        DisableEveryTable();
+        control_user_block.classList.remove("List-disabled");
+        control_users_title.textContent = "Edit User";
+        edit_users_block.classList.remove("List-disabled");
+        remove_users_block.classList.add("List-disabled");
+        add_users_block.classList.add("List-disabled");
+
+}
+
+for(let i=0; i<add_users_buttons.length; i++) {
+    add_users_buttons[i].addEventListener("click", ToggleAddUserInterface );
+}
+for(let i=0; i<remove_users_buttons.length; i++) {
+    remove_users_buttons[i].addEventListener("click", ToggleRemoveUserInterface );
+}
+for(let i=0; i<edit_users_buttons.length; i++) {
+    edit_users_buttons[i].addEventListener("click", ToggleEditUserInterface );
+}
+
