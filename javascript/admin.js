@@ -1,6 +1,7 @@
 const category_buttons = document.getElementsByClassName("Category-Buttons");
 const category_list = document.getElementsByClassName("List-block");
 const user_list = document.getElementById("User-list");
+const phone_list = document.getElementById("Phone-list");
 
 for(let i=0; i< category_buttons.length; i++){
     category_buttons[i].addEventListener("click", () => {
@@ -84,8 +85,20 @@ axios.get('http://localhost/-Full-Stack-E-commerce--back-end-/getallphones.php')
 });
 
 
-const GetEachPhone = (users) => {
-    for(let i=0; i<users.length; i++){
-        PrintUserInTable(users[i]);
+const GetEachPhone = (phones) => {
+    for(let i=0; i<phones.length; i++){
+        PrintPhoneInTable(phones[i]);
     }
+}
+
+const PrintPhoneInTable = (phone) => {
+    // Adding new row for the new elements to go into
+    let new_row = document.createElement("tr");
+    phone_list.insertAdjacentElement('beforeend', new_row);
+    AddThisElementToRow(new_row, phone.id);
+    AddThisElementToRow(new_row, phone.brand);
+    AddThisElementToRow(new_row, phone.model);
+    AddThisElementToRow(new_row, phone.price + "$");
+    AddThisElementToRow(new_row, phone.amount);
+    AddThisElementToRow(new_row, phone.memory);
 }
