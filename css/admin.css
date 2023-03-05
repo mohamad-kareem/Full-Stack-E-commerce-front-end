@@ -13,7 +13,7 @@ body{
     height: 100vh;
     color: white;
     background-color: #132B40;
-    border: 3px solid black;
+    /* border: 3px solid black; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -53,6 +53,10 @@ body{
     box-sizing: content-box;
 }
 
+.List-block{
+    margin-top: 30px;
+}
+
 .List-name-and-controls{
     height: 10%;
     display: flex;
@@ -84,6 +88,7 @@ body{
     overflow-y: scroll;
     width: 90%;
     margin: 15px 60px;
+    display: block;
 }
 
 .The-actual-list{
@@ -99,4 +104,13 @@ th,td{
 
 tr:nth-child(even){
     background-color: #dddddd;
+}
+
+.Button-enabled{
+    background-color: #337AA6;
+}
+
+
+.List-disabled{
+    display: none;
 }
