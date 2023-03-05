@@ -6,7 +6,7 @@ for(let i=0; i< category_buttons.length; i++){
         let button = category_buttons[i];;
         TurnOffEveryButton();
         TurnOnTheSelectedButton(button);
-        CheckTheCorrespondingTable(button);
+        ActivateTheCorrespondingTable(button);
     });
 }
 
@@ -18,8 +18,24 @@ const TurnOffEveryButton = () => {
 
 const TurnOnTheSelectedButton = (button) => button.classList.add("Button-enabled");
 
-const CheckTheCorrespondingTable = (button) => {
-    if (button.textContent == "List of Phones") {
+const ActivateTheCorrespondingTable = (button) => {
+    if (button.textContent == "List of Users") {
+        DisableEveryTable();
+        category_list[0].classList.remove("List-disabled");
+    }else if (button.textContent == "List of Phones") {
+        DisableEveryTable();
         category_list[1].classList.remove("List-disabled");
+    }else if (button.textContent == "List of Laptops") {
+        DisableEveryTable();
+        category_list[2].classList.remove("List-disabled");
+    }else if (button.textContent == "List of Accessories") {
+        DisableEveryTable();
+        category_list[3].classList.remove("List-disabled");
+    }
+}
+
+const DisableEveryTable = () => {
+    for(let i=0; i<category_list.length; i++){
+        category_list[i].classList.add("List-disabled");
     }
 }
