@@ -35,39 +35,22 @@
     <div class="main-container">
         <div class="checkbox-container">
             <h2>Categories</h2>
-          <p><b>Brand</b>:</p>
-          <form>
-          <label>
-            <input type="radio" id="brand1" name="brand" value="brandA">
-            Honor
-          </label>
-          <br>
-          <label>
-            <input type="radio"id="brand2" name="brand" value="brandB">
-            Samsung
-          </label>
-          <br>
-          <label>
-            <input type="radio"id="brand3" name="brand" value="brandC" checked>
-            Apple
-          </label>
-        </form>
-          <br>
+    
         <form>
           <p><b>Price:</b></p>
           <label>
-            <input type="radio" id="range1" name="price" value="range1">
-            200$-300$
+            <input type="radio" id="range-1" name="price" value="200-500">
+            200-500
           </label>
           <br>
           <label>
-            <input type="radio" id="range2" name="price" value="range2" >
-            300$-500$
+            <input type="radio" id="range-2" name="price" value="500-1000" >
+            500-1000
           </label>
           <br>
           <label>
-            <input type="radio"id="range3" name="price" value="range3" checked>
-            500$-1000$
+            <input type="radio"id="range-3" name="price" value="1000-3000">
+            1000-3000
           </label>
         </form>
         </div> 
@@ -77,12 +60,31 @@
             </div>
           </div>
 
-
                       <script>
+                        const priceRadio = document.querySelectorAll('input[name="price"]');
+
+
+                        function displayItems() {
+                              // Get the selected price range
+                              let minPrice = 0;
+                              let maxPrice = Infinity;
+
+                              for (let i = 0; i < priceRadio.length; i++) {
+                                if (priceRadio[i].checked) {
+                                  const priceRange = priceRadio[i].value.split('-');
+                                  minPrice = parseInt(priceRange[0]);
+                                  maxPrice = parseInt(priceRange[1]);
+                                  break;
+                                }
+                              }
+
+
                         fetch('http://localhost/-Full-Stack-E-commerce--back-end-/getallphones.php')
                             .then(response => response.json())
                             .then(data => {
                               const container = document.querySelector('#item-container');
+                              container.innerHTML = ''; // clear previous items
+
                               const rowClass = 'item-row';
                               const itemClass = 'item';
 
@@ -91,6 +93,8 @@
                               row.classList.add(rowClass);
 
                                 for (let j = i; j < i + 3 && j < data.length; j++) {
+                                    if (data[j].price >= minPrice && data[j].price <= maxPrice){
+
                                     const item = document.createElement('div');
                                     item.classList.add(itemClass);
 
@@ -108,8 +112,8 @@
                                     para.textContent = `$${data[j].price}`;
                                     item.appendChild(para);
                                     const button = document.createElement('button');
-                                      button.textContent = 'Add';
-                                       button.addEventListener('click', () => {
+                                    button.textContent = 'Add';
+                                    button.addEventListener('click', () => {
                                          console.log(`Button clicked for item ${data[j].model}`);
                                         
                                              });
@@ -122,13 +126,21 @@
          
                                                 });
                                                item.appendChild(button2);
-                                    row.appendChild(item);
-                                  
+                                               row.appendChild(item);
+                                    }
                                     
-                                }
+                                  }
                                 container.appendChild(row);
                                 }            
-                            });
+                            });}
+
+                            for (let i = 0; i < priceRadio.length; i++) {
+                                  priceRadio[i].addEventListener('change', displayItems);
+                                }
+
+                            // Initial display of all items
+                            displayItems();
+
                           </script>
 
 <footer>
