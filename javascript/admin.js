@@ -52,15 +52,31 @@ axios.get('http://localhost/-Full-Stack-E-commerce--back-end-/getallusers.php').
 
 const GetEachUser = (users) => {
     for(let i=0; i<users.length; i++){
+        console.log(users[i]);
         PrintUserInTable(users[i]);
     }
 }
 
 const PrintUserInTable = (user) => {
+
+    // Adding new row for the new elements to go into
     let new_row = document.createElement("tr");
     user_list.insertAdjacentElement('beforeend', new_row);
-    let user_id = document.createElement("td");
-    user_id.textContent = user.id;
-    new_row.insertAdjacentElement('beforeend', user_id);
+    
+    // let user_id = document.createElement("td");
+    // user_id.textContent = user.id;
+    // new_row.insertAdjacentElement('beforeend', user_id);
+    AddThisElementToRow(new_row, user.id);
+    AddThisElementToRow(new_row, user.fname);
+    AddThisElementToRow(new_row, user.lname);
+    AddThisElementToRow(new_row, user.email);
+    AddThisElementToRow(new_row, user.password);
+    AddThisElementToRow(new_row, user.phone);
+    AddThisElementToRow(new_row, user.address);
+}
 
+const AddThisElementToRow = (row, text_in_element) => {
+    let new_element = document.createElement("td");
+    new_element.textContent = text_in_element;
+    row.insertAdjacentElement('beforeend', new_element);
 }
