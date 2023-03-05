@@ -67,6 +67,17 @@ th:last-child{
     text-align: right;
 }
 
-
-
+#purchase{
+    display: flex;
+    justify-content: flex-end;
+}
+#purchase-btn{
+    width: 190px;
+    height: 100px;
+    color: #337AA6;
+    font-weight: bold;
+    font-size: 35px;
+    margin-top: 15px;
+    border-radius: 15px;
+}
   
