@@ -27,12 +27,12 @@ body{
     width: 100%;
 }
 
-.List{
+.Category-Buttons{
     padding: 15px;
     transition: 0.3s;
 }
 
-.List:hover{
+.Category-Buttons:hover{
     background-color: #337AA6;
 }
 
