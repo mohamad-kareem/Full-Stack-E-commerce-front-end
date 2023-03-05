@@ -82,6 +82,7 @@ body{
     border-radius: 5px;
     padding: 7px;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .Table-list{
@@ -111,7 +112,49 @@ tr:nth-child(even){
     background-color: #337AA6;
 }
 
-
 .List-disabled{
     display: none;
+}
+
+.Off-button{
+    background-color: #132B40;
+}
+
+.Add-block, .Edit-block, .Remove-block{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+
+.Input-for-user  {
+    border: 0;
+    border-bottom: 2px solid black;
+    width: 30%;
+    height: 50px;
+    margin-top: 50px;
+}
+
+.Pointing-to-forgetpassword{
+    width: 30%;
+    font-size: 12px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.In-block-buttons{
+    background-color: #337AA6;
+    margin-top: 50px;
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
 }
