@@ -165,7 +165,7 @@ const ToggleRemoveUserInterface = () => {
 const ToggleEditUserInterface = () => {
         DisableEveryTable();
         control_user_block.classList.remove("List-disabled");
-        control_users_title.textContent = "Edit User";
+        control_users_title.textContent = "Edit User Based On Id";
         edit_users_block.classList.remove("List-disabled");
         remove_users_block.classList.add("List-disabled");
         add_users_block.classList.add("List-disabled");

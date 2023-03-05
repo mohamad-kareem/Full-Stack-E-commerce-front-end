@@ -120,28 +120,19 @@ tr:nth-child(even){
     background-color: #132B40;
 }
 
-.Register-block{
+.Register-block, .Edit-block{
     display: flex;
     width: 100%;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
     margin-top: 40px;
 }
 
-.Register-title{
-    font-size: 50px;
-}
 
 
-.Register-description{
-    max-width: 500px;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-}
-
-#Email, #Password, #Verify_password, #Last_name, #First_name  {
+.Input-for-user  {
     border: 0;
     border-bottom: 2px solid black;
     width: 30%;
@@ -157,7 +148,7 @@ tr:nth-child(even){
     padding-bottom: 10px;
 }
 
-#Add-button{
+#Add-button, #Edit-button{
     background-color: #337AA6;
     margin-top: 50px;
     border: none;

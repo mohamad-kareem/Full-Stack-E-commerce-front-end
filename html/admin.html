@@ -142,15 +142,26 @@
                 </div>
                 <div class="Table-list List-disabled" id="Add-users-block">
                     <div class="Register-block">
-                        <input id="First_name" type="text" name="First_name" placeholder="First name">
-                        <input id="Last_name" type="text" name="Last_name" placeholder="Last name">
-                        <input id="Email" type="text" name="Email" placeholder="Email Address">
-                        <input id="Password" type="password" name="Password" placeholder="Password">
-                        <input id="Verify_password" type="password" name="Verify_password" placeholder="Verify Password">
+                        <input id="Add_First_name" class="Input-for-user" type="text" name="First_name" placeholder="First name" required>
+                        <input id="Add_Last_name" class="Input-for-user" type="text" name="Last_name" placeholder="Last name" required>
+                        <input id="Add_Email" class="Input-for-user" type="text" name="Email" placeholder="Email Address" required>
+                        <input id="Add_Password" class="Input-for-user" type="password" name="Password" placeholder="Password" required>
+                        <input id="Add_Verify_password" class="Input-for-user" type="password" name="Verify_password" placeholder="Verify Password" required>
                         <button id="Add-button" onclick="AddUserToDatabase()">Add</button>
                     </div>
                 </div>
-                <div class="Table-list List-disabled" id="Edit-users-block"><button>Edit</button></div>
+                <div class="Table-list List-disabled" id="Edit-users-block">
+                    <div class="Edit-block">
+                        <input id="Edit_User_id" class="Input-for-user" type="number" name="First_name" placeholder="ID" required>
+                        <input id="Edit_First_name" class="Input-for-user" type="text" name="First_name" placeholder="First name" required>
+                        <input id="Edit_Last_name" class="Input-for-user" type="text" name="Last_name" placeholder="Last name" required>
+                        <input id="Edit_Email" class="Input-for-user" type="text" name="Email" placeholder="Email Address" required>
+                        <input id="Edit_Password" class="Input-for-user" type="password" name="Password" placeholder="Password" required>
+                        <input id="Edit_Phone" class="Input-for-user" type="number" name="Phone" placeholder="xx xxx xxx" required>
+                        <input id="Edit_Address" class="Input-for-user" type="text" name="Address" placeholder="Address" required>
+                        <button id="Edit-button" onclick="EditUserInDatabaseBasedOnID()">Edit</button>
+                    </div>
+                </div>
                 <div class="Table-list List-disabled" id="Remove-users-block"></div>
             </div>
         </div>
