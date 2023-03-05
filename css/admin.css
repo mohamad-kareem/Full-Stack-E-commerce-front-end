@@ -30,6 +30,7 @@ body{
 .Category-Buttons{
     padding: 15px;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .Category-Buttons:hover{

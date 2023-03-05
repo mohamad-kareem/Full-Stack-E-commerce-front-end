@@ -1,6 +1,5 @@
 const category_buttons = document.getElementsByClassName("Category-Buttons");
 const category_list = document.getElementsByClassName("List-block");
-const user_header = document.getElementById("User-header");
 const user_list = document.getElementById("User-list");
 
 for(let i=0; i< category_buttons.length; i++){
@@ -48,11 +47,10 @@ axios.get('http://localhost/-Full-Stack-E-commerce--back-end-/getallusers.php').
     GetEachUser(users);
 }).catch(function (err) {
     console.log(err);
-})
+});
 
 const GetEachUser = (users) => {
     for(let i=0; i<users.length; i++){
-        console.log(users[i]);
         PrintUserInTable(users[i]);
     }
 }
@@ -62,10 +60,6 @@ const PrintUserInTable = (user) => {
     // Adding new row for the new elements to go into
     let new_row = document.createElement("tr");
     user_list.insertAdjacentElement('beforeend', new_row);
-    
-    // let user_id = document.createElement("td");
-    // user_id.textContent = user.id;
-    // new_row.insertAdjacentElement('beforeend', user_id);
     AddThisElementToRow(new_row, user.id);
     AddThisElementToRow(new_row, user.fname);
     AddThisElementToRow(new_row, user.lname);
@@ -79,4 +73,19 @@ const AddThisElementToRow = (row, text_in_element) => {
     let new_element = document.createElement("td");
     new_element.textContent = text_in_element;
     row.insertAdjacentElement('beforeend', new_element);
+}
+
+
+axios.get('http://localhost/-Full-Stack-E-commerce--back-end-/getallphones.php').then(function (res) {
+    let phones = res.data;
+    GetEachPhone(phones);
+}).catch(function (err) {
+    console.log(err);
+});
+
+
+const GetEachPhone = (users) => {
+    for(let i=0; i<users.length; i++){
+        PrintUserInTable(users[i]);
+    }
 }
