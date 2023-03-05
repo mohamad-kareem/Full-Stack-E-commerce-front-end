@@ -39,3 +39,13 @@ const DisableEveryTable = () => {
         category_list[i].classList.add("List-disabled");
     }
 }
+
+
+axios.get('http://localhost/-Full-Stack-E-commerce--back-end-/getallusers.php').then(function (res) {
+    let users = res.data;
+    PrintEachRowInTheTable(users);
+}).catch(function (err) {
+    console.log(err);
+})
+
+
