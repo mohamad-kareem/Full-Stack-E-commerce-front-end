@@ -120,7 +120,7 @@ tr:nth-child(even){
     background-color: #132B40;
 }
 
-.Register-block, .Edit-block{
+.Add-block, .Edit-block, .Remove-block{
     display: flex;
     width: 100%;
     flex-direction: row;
@@ -129,7 +129,6 @@ tr:nth-child(even){
     flex-wrap: wrap;
     margin-top: 40px;
 }
-
 
 
 .Input-for-user  {
@@ -148,7 +147,7 @@ tr:nth-child(even){
     padding-bottom: 10px;
 }
 
-#Add-button, #Edit-button{
+.In-block-buttons{
     background-color: #337AA6;
     margin-top: 50px;
     border: none;
