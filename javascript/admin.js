@@ -1,5 +1,7 @@
 const category_buttons = document.getElementsByClassName("Category-Buttons");
 const category_list = document.getElementsByClassName("List-block");
+const user_header = document.getElementById("User-header");
+const user_list = document.getElementById("User-list");
 
 for(let i=0; i< category_buttons.length; i++){
     category_buttons[i].addEventListener("click", () => {
@@ -43,9 +45,22 @@ const DisableEveryTable = () => {
 
 axios.get('http://localhost/-Full-Stack-E-commerce--back-end-/getallusers.php').then(function (res) {
     let users = res.data;
-    PrintEachRowInTheTable(users);
+    GetEachUser(users);
 }).catch(function (err) {
     console.log(err);
 })
 
+const GetEachUser = (users) => {
+    for(let i=0; i<users.length; i++){
+        PrintUserInTable(users[i]);
+    }
+}
 
+const PrintUserInTable = (user) => {
+    let new_row = document.createElement("tr");
+    user_list.insertAdjacentElement('beforeend', new_row);
+    let user_id = document.createElement("td");
+    user_id.textContent = user.id;
+    new_row.insertAdjacentElement('beforeend', user_id);
+
+}
