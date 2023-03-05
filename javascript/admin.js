@@ -3,6 +3,9 @@ const category_list = document.getElementsByClassName("List-block");
 const user_list = document.getElementById("User-list");
 const phone_list = document.getElementById("Phone-list");
 const laptop_list = document.getElementById("Laptop-list");
+const add_user_button = document.getElementById("Add-user");
+const control_user_block = document.getElementById("Control-users-block");
+const control_users_title = document.getElementById("Control-users-title");
 
 for(let i=0; i< category_buttons.length; i++){
     category_buttons[i].addEventListener("click", () => {
@@ -108,7 +111,6 @@ const PrintPhoneInTable = (phone) => {
 axios.get('http://localhost/-Full-Stack-E-commerce--back-end-/getalllaptops.php').then(function (res) {
     let laptops = res.data;
     GetEachLaptop(laptops);
-    console.log(laptops);
 }).catch(function (err) {
     console.log(err);
 });
@@ -134,3 +136,23 @@ const PrintLaptopInTable = (laptop) => {
     AddThisElementToRow(new_row, laptop.processor);
     AddThisElementToRow(new_row, laptop.ram);
 }
+
+const ButtonIsEnabled = (button) => !button.classList.contains("Off-button");
+const DisableButton = (button) => {
+    button.classList.add("Off-button");
+}
+const EnableButton = (button) => {
+    button.classList.remove("Off-button");
+}
+
+const ToggleAddUserInterface = () => {
+    if (ButtonIsEnabled(add_user_button)) {
+        DisableButton(add_user_button);
+        add_user_button.classList.add("Off-button");
+        DisableEveryTable();
+        control_user_block.classList.remove("List-disabled");
+        // control_users_title.textContent = "Add User";
+    }
+}
+
+add_user_button.addEventListener("click", ToggleAddUserInterface );

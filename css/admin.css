@@ -82,6 +82,7 @@ body{
     border-radius: 5px;
     padding: 7px;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .Table-list{
@@ -111,7 +112,10 @@ tr:nth-child(even){
     background-color: #337AA6;
 }
 
-
 .List-disabled{
     display: none;
+}
+
+.Off-button{
+    background-color: #132B40;
 }
