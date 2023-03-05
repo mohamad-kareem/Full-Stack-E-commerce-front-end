@@ -200,7 +200,8 @@ footer {
   border: 2px solid black;
   width: calc((100% / 3) - 10px);
   height: 300px;
-  border: 1px solid black;
+
+ 
   box-sizing: border-box;
   padding: 10px;
   display: flex;
@@ -213,7 +214,7 @@ footer {
 
 .item img {
   height:150px;
-  width:200px;
+  width:250px;
   margin-bottom: 10px;
   border-radius:10px;
 }
