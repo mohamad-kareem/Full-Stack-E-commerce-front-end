@@ -2,6 +2,7 @@ const category_buttons = document.getElementsByClassName("Category-Buttons");
 const category_list = document.getElementsByClassName("List-block");
 const user_list = document.getElementById("User-list");
 const phone_list = document.getElementById("Phone-list");
+const laptop_list = document.getElementById("Laptop-list");
 
 for(let i=0; i< category_buttons.length; i++){
     category_buttons[i].addEventListener("click", () => {
@@ -101,4 +102,35 @@ const PrintPhoneInTable = (phone) => {
     AddThisElementToRow(new_row, phone.price + "$");
     AddThisElementToRow(new_row, phone.amount);
     AddThisElementToRow(new_row, phone.memory);
+}
+
+
+axios.get('http://localhost/-Full-Stack-E-commerce--back-end-/getalllaptops.php').then(function (res) {
+    let laptops = res.data;
+    GetEachLaptop(laptops);
+    console.log(laptops);
+}).catch(function (err) {
+    console.log(err);
+});
+
+
+const GetEachLaptop = (laptops) => {
+    for(let i=0; i<laptops.length; i++){
+        PrintLaptopInTable(laptops[i]);
+    }
+}
+
+const PrintLaptopInTable = (laptop) => {
+    // Adding new row for the new elements to go into
+    let new_row = document.createElement("tr");
+    laptop_list.insertAdjacentElement('beforeend', new_row);
+    AddThisElementToRow(new_row, laptop.id);
+    AddThisElementToRow(new_row, laptop.brand);
+    AddThisElementToRow(new_row, laptop.model);
+    AddThisElementToRow(new_row, laptop.price + "$");
+    AddThisElementToRow(new_row, laptop.quantity);
+    AddThisElementToRow(new_row, laptop.vga);
+    AddThisElementToRow(new_row, laptop.processor_type);
+    AddThisElementToRow(new_row, laptop.processor);
+    AddThisElementToRow(new_row, laptop.ram);
 }
