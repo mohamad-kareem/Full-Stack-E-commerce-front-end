@@ -119,3 +119,52 @@ tr:nth-child(even){
 .Off-button{
     background-color: #132B40;
 }
+
+.Register-block{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.Register-title{
+    font-size: 50px;
+}
+
+
+.Register-description{
+    max-width: 500px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+#Email, #Password, #Verify_password, #Last_name, #First_name  {
+    border: 0;
+    border-bottom: 2px solid black;
+    width: 30%;
+    height: 50px;
+    margin-top: 50px;
+}
+
+.Pointing-to-forgetpassword{
+    width: 30%;
+    font-size: 12px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#Signup-button{
+    background-color: #337AA6;
+    margin-top: 50px;
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}

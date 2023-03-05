@@ -6,6 +6,7 @@ const laptop_list = document.getElementById("Laptop-list");
 const add_user_button = document.getElementById("Add-user");
 const control_user_block = document.getElementById("Control-users-block");
 const control_users_title = document.getElementById("Control-users-title");
+const add_users_block = document.getElementById("Add-users-block");
 
 for(let i=0; i< category_buttons.length; i++){
     category_buttons[i].addEventListener("click", () => {
@@ -147,11 +148,10 @@ const EnableButton = (button) => {
 
 const ToggleAddUserInterface = () => {
     if (ButtonIsEnabled(add_user_button)) {
-        DisableButton(add_user_button);
-        add_user_button.classList.add("Off-button");
         DisableEveryTable();
         control_user_block.classList.remove("List-disabled");
-        // control_users_title.textContent = "Add User";
+        control_users_title.textContent = "Add User";
+        add_users_block.classList.remove("List-disabled");
     }
 }
 
