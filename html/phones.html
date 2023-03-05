@@ -8,33 +8,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Poppins:ital,wght@0,200;1,200&family=Roboto:wght@500&display=swap" rel="stylesheet">
 
 
-
-
-
   <body>
     
-    <nav>
+    <nav class="navbar">
       <div class="navbar-logo">
-        <img src="logo.png" alt="Logo">
+        <a href="#"><img src="logo.png" alt="Logo"></a>
       </div>
       <div class="navbar-links">
         <a href="#">Home</a>
-        <select id="dropdown">
-            <option value="">Products</option>
-            <option value="option1">Laptops</option>
-            <option value="option2">Phones</option>
-            <option value="option3">Accessories</option>
-            
-        </select>
+        <div class="navbar-dropdown">
+          <a href="#">Phones</a>
+          <a href="#">Laptops</a>
+        </div>
+        <a href="#">About Us</a>
+        <a href="#">Contact Us</a>
       </div>
       <div class="navbar-icons">
-        <ul>
-            <li><a href="#" class="fa fa-heart-o" style="color: white;"></a></li>
-            <li><a href="#" class="fa fa-shopping-cart" style="color: white;" ></a></li>
-            <li><a href="#" class="fa fa-user-circle-o"style="color: white;"></a></li>
-        </ul>
+        <a href="#"><i class="fa fa-heart-o"></i></a>
+        <a href="#"><i class="fa fa-shopping-cart"></i></a>
+        <a href="#"><i class="fa fa-user-circle-o"></i></a>
       </div>
     </nav>
+    
     <div class="title"><h1><b>Phones</b></h1></div>
     
     <div class="main-container">
@@ -111,11 +106,25 @@
 
                                     const para = document.createElement('paragraph');
                                     para.textContent = `$${data[j].price}`;
-                                    
                                     item.appendChild(para);
-
-
+                                    const button = document.createElement('button');
+                                      button.textContent = 'Add';
+                                       button.addEventListener('click', () => {
+                                         console.log(`Button clicked for item ${data[j].model}`);
+                                        
+                                             });
+                                             
+                                             item.appendChild(button);
+                                             const button2 = document.createElement('button');
+                                              button2.textContent = 'Save';
+                                              button2.addEventListener('click', () => {
+                                             console.log(`Add to Cart button clicked for item ${data[j].model}`);
+         
+                                                });
+                                               item.appendChild(button2);
                                     row.appendChild(item);
+                                  
+                                    
                                 }
                                 container.appendChild(row);
                                 }            
