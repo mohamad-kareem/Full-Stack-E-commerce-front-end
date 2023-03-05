@@ -110,7 +110,8 @@
                                     item.appendChild(name);
 
                                     const para = document.createElement('paragraph');
-                                    para.textContent = data[j].price;
+                                    para.textContent = `$${data[j].price}`;
+                                    
                                     item.appendChild(para);
 
 
