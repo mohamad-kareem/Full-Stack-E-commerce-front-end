@@ -18,7 +18,7 @@ function signup() {
     
     axios({
         "method": "post",
-        "url": "http://localhost/back-end/registeration.php",
+        "url": "http://localhost/-Full-Stack-E-commerce--back-end-/registration.php",
         "data": data
     }).then((result) => {
         console.log(result)
