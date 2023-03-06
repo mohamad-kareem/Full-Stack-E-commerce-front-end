@@ -140,3 +140,23 @@ justify-content: space-between;
 #Signin:hover{
   transform: scale(1.2);
 }
+form{
+  border: 10px solid #337AA6;
+  border-radius: 30px;
+  transition: all 0.1s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: -5px -5px 15px #337AA6,
+  5px 5px 15px #337AA6;
+  width:fit-content;
+  margin-left: 150px;
+  margin-top: 50px;
+  padding: 20px;
+}
+#forgot-password-input{
+padding: 10px;
+font-size: 20px;
+}
