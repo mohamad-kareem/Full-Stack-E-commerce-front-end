@@ -289,6 +289,7 @@ for(let i=0; i<edit_users_buttons.length; i++) {
 
 // Start of button functions
 
+// Adding elements to the DB
 
 const AddUserToDatabase = () => {
     let first_name = document.getElementById('Add_user_First_name').value;
@@ -313,7 +314,7 @@ const AddUserToDatabase = () => {
     }).then((result) => {
         console.log(result)
         if (result.data.status == "success") {
-            alert("user added!")
+            alert("User Added!")
             window.location.href = 'admin.html';
         }
     }).catch((err) => {
@@ -358,7 +359,160 @@ const AddPhoneToDatabase = () => {
     }).then((result) => {
         console.log(result)
         if (result.data.status == "success") {
-            alert("phone added!")
+            alert("Phone Added!")
+            window.location.href = 'admin.html';
+        }
+    }).catch((err) => {
+        console.error(err)
+    });
+}
+
+
+const AddlaptopToDatabase = () => {
+    let brand = document.getElementById('Add_laptop_brand').value;
+    let model = document.getElementById('Add_laptop_model').value;
+    let price = document.getElementById('Add_laptop_price').value;
+    let amount = document.getElementById('Add_laptop_amount').value;
+    let vga = document.getElementById('Add_laptop_vga').value;
+    let processor_type = document.getElementById('Add_laptop_processor_type').value;
+    let processor = document.getElementById('Add_laptop_processor').value;
+    let ram = document.getElementById('Add_laptop_ram').value;
+    let imgurl = document.getElementById('Add_laptop_imgurl').value;
+
+    if(brand == "dell"){
+        brand = 1;
+    }else if(brand == "asus"){
+        brand = 2;
+    }else if(brand == "hp"){
+        brand = 3;
+    }else if(brand == "apple"){
+        brand = 4;
+    }else if(brand == "honor"){
+        brand = 5;
+    }else if(brand == "samsung"){
+        brand = 6;
+    }
+
+    let data = new FormData();
+    data.append('brand', brand);
+    data.append('model', model);
+    data.append('price', price);
+    data.append('amount', amount);
+    data.append('vga', vga);
+    data.append('processor_type', processor_type);
+    data.append('processor', processor);
+    data.append('ram', ram);
+    data.append('imgurl', imgurl);
+
+    axios({
+        "method": "post",
+        "url": "http://localhost/-Full-Stack-E-commerce--back-end-/addlaptop.php",
+        "data": data
+    }).then((result) => {
+        console.log(result)
+        if (result.data.status == "success") {
+            alert("Laptop Added!")
+            window.location.href = 'admin.html';
+        }
+    }).catch((err) => {
+        console.error(err)
+    });
+}
+
+
+// Removing elements from the DB
+
+const RemoveUserInDatabaseBasedOnID = () => {
+    let user_id = document.getElementById('Remove_User_id').value;
+
+    let data = new FormData();
+    data.append('user_id', user_id);
+
+    axios({
+        "method": "post",
+        "url": "http://localhost/-Full-Stack-E-commerce--back-end-/removeuser.php",
+        "data": data
+    }).then((result) => {
+        console.log(result)
+        if (result.data.status == "success") {
+            alert("User Removed!")
+            window.location.href = 'admin.html';
+        }
+    }).catch((err) => {
+        console.error(err)
+    });
+}
+
+const RemovePhoneInDatabaseBasedOnID = () => {
+    let phone_id = document.getElementById('Remove_phone_id').value;
+
+    let data = new FormData();
+    data.append('phone_id', phone_id);
+
+    axios({
+        "method": "post",
+        "url": "http://localhost/-Full-Stack-E-commerce--back-end-/removephone.php",
+        "data": data
+    }).then((result) => {
+        console.log(result)
+        if (result.data.status == "success") {
+            alert("Phone Removed!")
+            window.location.href = 'admin.html';
+        }
+    }).catch((err) => {
+        console.error(err)
+    });
+}
+
+const RemovelaptopInDatabaseBasedOnID = () => {
+    let laptop_id = document.getElementById('Remove_laptop_id').value;
+
+    let data = new FormData();
+    data.append('laptop_id', laptop_id);
+
+    axios({
+        "method": "post",
+        "url": "http://localhost/-Full-Stack-E-commerce--back-end-/removelaptop.php",
+        "data": data
+    }).then((result) => {
+        console.log(result)
+        if (result.data.status == "success") {
+            alert("Laptop Removed!")
+            window.location.href = 'admin.html';
+        }
+    }).catch((err) => {
+        console.error(err)
+    });
+}
+
+// Editing elements in the DB
+
+const EditUserInDatabaseBasedOnID = () => {
+    let user_id = document.getElementById('Edit_user_id').value;
+    let first_name = document.getElementById('Add_user_First_name').value;
+    let last_name = document.getElementById('Add_user_Last_name').value;
+    let email = document.getElementById('Add_user_Email').value;
+    let password = document.getElementById('Add_user_Password').value;
+    let phone = document.getElementById('Add_user_Phone').value;
+    let address = document.getElementById('Add_user_Address').value;
+
+    let data = new FormData();
+    data.append('user_id', user_id);
+    data.append('first_name', first_name);
+    data.append('last_name', last_name);
+    data.append('email', email);
+    data.append('password', password);
+    data.append('phone', phone);
+    data.append('address', address);
+
+    axios({
+        "method": "post",
+        "url": "http://localhost/-Full-Stack-E-commerce--back-end-/edituser.php",
+        "data": data
+    }).then((result) => {
+        console.log(result)
+        if (result.data.status == "success") {
+            alert("User Edited!")
             window.location.href = 'admin.html';
         }
     }).catch((err) => {
