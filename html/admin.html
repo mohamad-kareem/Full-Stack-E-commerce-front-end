@@ -152,7 +152,7 @@
                 </div>
                 <div class="Table-list List-disabled" id="Edit-users-block">
                     <div class="Edit-block">
-                        <input id="Edit_user_User_id" class="Input-for-user" type="number" name="User_id" placeholder="ID" required>
+                        <input id="Edit_user_id" class="Input-for-user" type="number" name="User_id" placeholder="ID" required>
                         <input id="Edit_user_First_name" class="Input-for-user" type="text" name="First_name" placeholder="First name" required>
                         <input id="Edit_user_Last_name" class="Input-for-user" type="text" name="Last_name" placeholder="Last name" required>
                         <input id="Edit_user_Email" class="Input-for-user" type="text" name="Email" placeholder="Email Address" required>
@@ -164,7 +164,7 @@
                 </div>
                 <div class="Table-list List-disabled" id="Remove-users-block">
                     <div class="Remove-block">
-                        <input id="Remove_User_id" class="Input-for-user" type="number" name="First_name" placeholder="ID" required>
+                        <input id="Remove_User_id" class="Input-for-user" type="number" name="user-id" placeholder="User ID" required>
                         <button id="Remove-user-button" class="In-block-buttons" onclick="RemoveUserInDatabaseBasedOnID()">Remove</button>
                     </div>
                 </div>
@@ -191,19 +191,18 @@
                 </div>
                 <div class="Table-list List-disabled" id="Edit-phones-block">
                     <div class="Edit-block">
-                        <input id="Edit_phone_User_id" class="Input-for-user" type="number" name="User_id" placeholder="ID" required>
-                        <input id="Edit_phone_First_name" class="Input-for-user" type="text" name="First_name" placeholder="First name" required>
-                        <input id="Edit_phone_Last_name" class="Input-for-user" type="text" name="Last_name" placeholder="Last name" required>
-                        <input id="Edit_phone_Email" class="Input-for-user" type="text" name="Email" placeholder="Email Address" required>
-                        <input id="Edit_phone_Password" class="Input-for-user" type="password" name="Password" placeholder="Password" required>
-                        <input id="Edit_phone_Phone" class="Input-for-user" type="number" name="Phone" placeholder="xx xxx xxx" required>
-                        <input id="Edit_phone_Address" class="Input-for-user" type="text" name="Address" placeholder="Address" required>
+                        <input id="Edit_phone_id" class="Input-for-user" type="number" name="phone_id" placeholder="Phone ID" required>
+                        <input id="Edit_phone_brand" class="Input-for-user" type="text" name="brand" placeholder="Brand" required>
+                        <input id="Edit_phone_model" class="Input-for-user" type="text" name="model" placeholder="Model" required>
+                        <input id="Edit_phone_price" class="Input-for-user" type="number" name="price" placeholder="Price in $" required>
+                        <input id="Edit_phone_amount" class="Input-for-user" type="number" name="amount" placeholder="Amount" required>
+                        <input id="Edit_phone_memory" class="Input-for-user" type="number" name="memory" placeholder="Memory" required>
                         <button id="Edit-phone-button" class="In-block-buttons" onclick="EditPhoneInDatabaseBasedOnID()">Edit</button>
                     </div>
                 </div>
                 <div class="Table-list List-disabled" id="Remove-phones-block">
                     <div class="Remove-block">
-                        <input id="Remove_phone_User_id" class="Input-for-user" type="number" name="First_name" placeholder="ID" required>
+                        <input id="Remove_phone_id" class="Input-for-user" type="number" name="phone_id" placeholder="Phone ID" required>
                         <button id="Remove-phone-button" class="In-block-buttons" onclick="RemovePhoneInDatabaseBasedOnID()">Remove</button>
                     </div>
                 </div>
