@@ -24,4 +24,11 @@ function signin() {
 
 }
 
+const pointingToForgetPassword = document.getElementById("Pointing-to-forgetpassword");
+const forgotPasswordForm = document.getElementById("forgot-password-form");
+
+pointingToForgetPassword.addEventListener("click", () => {
+    console.log("Forgot password clicked");
+    forgotPasswordForm.style.display = "block";
+  });
 
