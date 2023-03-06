@@ -517,3 +517,51 @@ const EditUserInDatabaseBasedOnEmail = () => {
         console.error(err)
     });
 }
+
+
+const EditPhoneInDatabaseBasedOnID = () => {
+    let phone_id = document.getElementById('Edit_phone_id').value;
+    let brand = document.getElementById('Edit_phone_brand').value;
+    let model = document.getElementById('Edit_phone_model').value;
+    let price = document.getElementById('Edit_phone_price').value;
+    let amount = document.getElementById('Edit_phone_amount').value;
+    let memory = document.getElementById('Edit_phone_memory').value;
+    let imgurl = document.getElementById('Edit_phone_imgurl').value;
+
+    if(brand == "dell"){
+        brand = 1;
+    }else if(brand == "asus"){
+        brand = 2;
+    }else if(brand == "hp"){
+        brand = 3;
+    }else if(brand == "apple"){
+        brand = 4;
+    }else if(brand == "honor"){
+        brand = 5;
+    }else if(brand == "samsung"){
+        brand = 6;
+    }
+
+    let data = new FormData();
+    data.append('phone_id', phone_id);
+    data.append('brand', brand);
+    data.append('model', model);
+    data.append('price', price);
+    data.append('amount', amount);
+    data.append('memory', memory);
+    data.append('imgurl', imgurl);
+
+    axios({
+        "method": "post",
+        "url": "http://localhost/-Full-Stack-E-commerce--back-end-/editphone.php",
+        "data": data
+    }).then((result) => {
+        console.log(result)
+        if (result.data.status == "success") {
+            alert("Phone Edited!")
+            window.location.href = 'admin.html';
+        }
+    }).catch((err) => {
+        console.error(err)
+    });
+}
