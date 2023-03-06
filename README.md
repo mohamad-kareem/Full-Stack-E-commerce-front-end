@@ -36,3 +36,9 @@ To learn about APIs and MySQL and implement this knowledge in a full stack ecomm
 | Home Page | Admin Page | Login Page | Register Page | Products Page |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
 | ![Home Page](./images/Wireframes/Homepage.png) | ![Admin Page](./images/Wireframes/Adminpage.png) | ![Login Page](./images/Wireframes/Loginpage.png) | ![Register Page](./images/Wireframes/Registerpage.png) | ![Products Page](./images/Wireframes/Productspage.png)
+
+# Implementation of these Wireframes:
+
+| Home Page | Admin Page | Login Page | Register Page | Products Page |
+| ----------- | ----------- | ----------- | ----------- | ----------- |
+| ![Home Page](./images/Implementation/Homepage.png) | ![Admin Page](./images/Implementation/Adminpage.png) | ![Login Page](./images/Implementation/Loginpage.png) | ![Register Page](./images/Implementation/Registerpage.png) | ![Products Page](./images/Implementation/Productspage.png)
