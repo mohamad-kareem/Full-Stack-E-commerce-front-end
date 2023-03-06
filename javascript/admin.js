@@ -289,6 +289,7 @@ for(let i=0; i<edit_users_buttons.length; i++) {
 
 // Start of button functions
 
+// Adding elements to the DB
 
 const AddUserToDatabase = () => {
     let first_name = document.getElementById('Add_user_First_name').value;
@@ -313,7 +314,7 @@ const AddUserToDatabase = () => {
     }).then((result) => {
         console.log(result)
         if (result.data.status == "success") {
-            alert("user added!")
+            alert("User Added!")
             window.location.href = 'admin.html';
         }
     }).catch((err) => {
@@ -358,7 +359,7 @@ const AddPhoneToDatabase = () => {
     }).then((result) => {
         console.log(result)
         if (result.data.status == "success") {
-            alert("phone added!")
+            alert("Phone Added!")
             window.location.href = 'admin.html';
         }
     }).catch((err) => {
@@ -410,7 +411,31 @@ const AddlaptopToDatabase = () => {
     }).then((result) => {
         console.log(result)
         if (result.data.status == "success") {
-            alert("laptop added!")
+            alert("Laptop Added!")
+            window.location.href = 'admin.html';
+        }
+    }).catch((err) => {
+        console.error(err)
+    });
+}
+
+
+// Removing elements from the DB
+
+const RemoveUserInDatabaseBasedOnID = () => {
+    let User_id = document.getElementById('Remove_User_id').value;
+
+    let data = new FormData();
+    data.append('User_id', User_id);
+
+    axios({
+        "method": "post",
+        "url": "http://localhost/-Full-Stack-E-commerce--back-end-/removeuser.php",
+        "data": data
+    }).then((result) => {
+        console.log(result)
+        if (result.data.status == "success") {
+            alert("User Removed!")
             window.location.href = 'admin.html';
         }
     }).catch((err) => {
