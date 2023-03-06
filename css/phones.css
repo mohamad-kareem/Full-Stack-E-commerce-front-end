@@ -60,6 +60,7 @@ align-items: center;
 #home {
 margin-top: 2px;
 color: white;
+text-decoration: none;
 }
 .navbar-icons ul{
 display: flex;

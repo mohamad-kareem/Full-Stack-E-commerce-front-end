@@ -26,6 +26,7 @@ function signup() {
             alert("signed up")
             window.location.href = 'index.html';
 
+            
         }
     }).catch((err) => {
         console.error(err)

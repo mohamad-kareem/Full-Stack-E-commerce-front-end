@@ -2,6 +2,7 @@
 body{
     font-family: Roboto;
     color: #132B40;
+   
   }
   .navbar {
     display: flex;
@@ -59,6 +60,7 @@ display: flex;
 #home {
 margin-top: 2px;
 color: white;
+text-decoration: none;
   }
 .navbar-icons ul{
  display: flex;
@@ -72,14 +74,25 @@ justify-content: space-between;
     padding: 0;
     }
 
-
+.form{
+  border: 10px solid #337AA6;
+  border-radius: 30px;
+  transition: all 0.1s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: -5px -5px 15px #337AA6,
+  5px 5px 15px #337AA6;
+  width:fit-content;
+}
 .Login-block{
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;   
+  margin-top: 30px;
+  
 }
 
 .Login-title{
@@ -92,12 +105,13 @@ justify-content: space-between;
     text-align: center;
     padding: 0;
     margin: 0;
+    font-size: 18px;
 }
 
 #Email, #Password  {
     border: 0;
     border-bottom: 2px solid black;
-    width: 30%;
+    width: 60%;
     height: 50px;
     margin-top: 50px;
 }
@@ -105,17 +119,18 @@ justify-content: space-between;
 .Pointing-to-forgetpassword{
     width: 30%;
     font-size: 12px;
-    text-align: right;
+    text-align: center;
 }
 
-.Signin-button{
+#Signin{
     background-color: #337AA6;
-    margin-top: 50px;
+    margin-bottom: 10px;
+    margin-left: 10px;
     border: none;
     border-radius: 10px;
     width: 100px;
     height: 50px;
-    color: white;
+    color: black;
     font-size: 20px;
     cursor: pointer;
 }
