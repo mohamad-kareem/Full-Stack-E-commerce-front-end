@@ -13,6 +13,7 @@ function signin() {
         console.log(res.data)
         // window.localStorage.setItem('user_id', res.data.user_id)
         // window.sessionStorage.setItem('user_id', res.data.user_id)
+        
         console.log(window.sessionStorage.getItem('id'))
         alert("you are signed in")
         window.location.href = 'index.html';
