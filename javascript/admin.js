@@ -3,7 +3,8 @@ const category_list = document.getElementsByClassName("List-block");
 const user_list = document.getElementById("User-list");
 const phone_list = document.getElementById("Phone-list");
 const laptop_list = document.getElementById("Laptop-list");
-const control_user_block = document.getElementById("Control-users-block");
+
+const control_users_block = document.getElementById("Control-users-block");
 const control_users_title = document.getElementById("Control-users-title");
 const add_users_buttons = document.getElementsByClassName("Add-user");
 const add_users_block = document.getElementById("Add-users-block");
@@ -11,6 +12,16 @@ const remove_users_buttons = document.getElementsByClassName("Remove-user");
 const remove_users_block = document.getElementById("Remove-users-block");
 const edit_users_buttons = document.getElementsByClassName("Edit-user");
 const edit_users_block = document.getElementById("Edit-users-block");
+
+const control_phones_block = document.getElementById("Control-phones-block");
+const control_phones_title = document.getElementById("Control-phones-title");
+const add_phones_buttons = document.getElementsByClassName("Add-phone");
+const add_phones_block = document.getElementById("Add-phones-block");
+const remove_phones_buttons = document.getElementsByClassName("Remove-phone");
+const remove_phones_block = document.getElementById("Remove-phones-block");
+const edit_phones_buttons = document.getElementsByClassName("Edit-phone");
+const edit_phones_block = document.getElementById("Edit-phones-block");
+
 
 for(let i=0; i< category_buttons.length; i++){
     category_buttons[i].addEventListener("click", () => {
@@ -142,11 +153,12 @@ const PrintLaptopInTable = (laptop) => {
     AddThisElementToRow(new_row, laptop.ram);
 }
 
-const ButtonIsEnabled = (button) => !button.classList.contains("Off-button");
+
+// For manipulating users
 
 const ToggleAddUserInterface = () => {
     DisableEveryTable();
-    control_user_block.classList.remove("List-disabled");
+    control_users_block.classList.remove("List-disabled");
     control_users_title.textContent = "Add User";
     add_users_block.classList.remove("List-disabled");
     edit_users_block.classList.add("List-disabled");
@@ -155,8 +167,8 @@ const ToggleAddUserInterface = () => {
 
 const ToggleRemoveUserInterface = () => {
         DisableEveryTable();
-        control_user_block.classList.remove("List-disabled");
-        control_users_title.textContent = "Remove User";
+        control_users_block.classList.remove("List-disabled");
+        control_users_title.textContent = "Remove User Based On Id";
         remove_users_block.classList.remove("List-disabled");
         add_users_block.classList.add("List-disabled");
         edit_users_block.classList.add("List-disabled");
@@ -164,7 +176,7 @@ const ToggleRemoveUserInterface = () => {
 
 const ToggleEditUserInterface = () => {
         DisableEveryTable();
-        control_user_block.classList.remove("List-disabled");
+        control_users_block.classList.remove("List-disabled");
         control_users_title.textContent = "Edit User Based On Id";
         edit_users_block.classList.remove("List-disabled");
         remove_users_block.classList.add("List-disabled");
@@ -182,3 +194,42 @@ for(let i=0; i<edit_users_buttons.length; i++) {
     edit_users_buttons[i].addEventListener("click", ToggleEditUserInterface );
 }
 
+// For manipulating phones
+
+const ToggleAddPhoneInterface = () => {
+    DisableEveryTable();
+    control_phones_block.classList.remove("List-disabled");
+    control_phones_title.textContent = "Add Phone";
+    add_phones_block.classList.remove("List-disabled");
+    edit_phones_block.classList.add("List-disabled");
+    remove_phones_block.classList.add("List-disabled");
+}
+
+const ToggleRemovePhoneInterface = () => {
+        DisableEveryTable();
+        control_phones_block.classList.remove("List-disabled");
+        control_phones_title.textContent = "Remove Phone Based On Id";
+        remove_phones_block.classList.remove("List-disabled");
+        add_phones_block.classList.add("List-disabled");
+        edit_phones_block.classList.add("List-disabled");
+}
+
+const ToggleEditPhoneInterface = () => {
+        DisableEveryTable();
+        control_phones_block.classList.remove("List-disabled");
+        control_phones_title.textContent = "Edit Phones Based On Id";
+        edit_phones_block.classList.remove("List-disabled");
+        remove_phones_block.classList.add("List-disabled");
+        add_phones_block.classList.add("List-disabled");
+
+}
+
+for(let i=0; i<add_phones_buttons.length; i++) {
+    add_phones_buttons[i].addEventListener("click", ToggleAddPhoneInterface );
+}
+for(let i=0; i<remove_users_buttons.length; i++) {
+    remove_phones_buttons[i].addEventListener("click", ToggleRemovePhoneInterface );
+}
+for(let i=0; i<edit_users_buttons.length; i++) {
+    edit_phones_buttons[i].addEventListener("click", ToggleEditPhoneInterface );
+}
