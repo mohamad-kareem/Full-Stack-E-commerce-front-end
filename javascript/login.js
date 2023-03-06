@@ -12,8 +12,7 @@ function signin() {
     axios.post('http://localhost/-Full-Stack-E-commerce--back-end-/login.php', data).then(function (res) {
         console.log(res.data)
         if(res.data.response == "logged in"){
-            // window.localStorage.setItem('user_id', res.data.user_id)
-            // window.sessionStorage.setItem('user_id', res.data.user_id)
+
             window.sessionStorage.setItem('email', res.data.email);// sessionnnnnn
             console.log(window.sessionStorage.getItem('email'))
             alert("you are signed in ")
@@ -36,18 +35,6 @@ function signin() {
         console.log(err);
     });
 
-    // axios.post('http://localhost/-Full-Stack-E-commerce--back-end-/checkadmin.php', data).then(function (result) {
-    //     console.log(result.data.status);
-    //     if (result.data.status == "success") {
-    //         alert("Admin signed in!")
-    //         window.location.href = 'admin.html';
-    //     }else{
-    //         alert("Wrong email or password!");
-    //     }
-    // }).catch(function (err) {
-    //     console.log(err);
-    // });
-
 }
 
 const pointingToForgetPassword = document.getElementById("Pointing-to-forgetpassword");
@@ -56,5 +43,13 @@ const forgotPasswordForm = document.getElementById("forgot-password-form");
 pointingToForgetPassword.addEventListener("click", () => {
     console.log("Forgot password clicked");
     forgotPasswordForm.style.display = "block";
-  });
+    let submit_forget = document.getElementById('submit-forgot-password');
+    submit_forget.addEventListener('click', checkemail);
 
+
+
+
+
+
+  });
+  
