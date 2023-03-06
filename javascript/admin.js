@@ -565,3 +565,57 @@ const EditPhoneInDatabaseBasedOnID = () => {
         console.error(err)
     });
 }
+
+
+const EditlaptopInDatabaseBasedOnID = () => {
+    let laptop_id = document.getElementById('Edit_laptop_id').value;
+    let brand = document.getElementById('Edit_laptop_brand').value;
+    let model = document.getElementById('Edit_laptop_model').value;
+    let price = document.getElementById('Edit_laptop_price').value;
+    let amount = document.getElementById('Edit_laptop_amount').value;
+    let vga = document.getElementById('Edit_laptop_vga').value;
+    let processor_type = document.getElementById('Edit_laptop_processor_type').value;
+    let processor = document.getElementById('Edit_laptop_processor').value;
+    let ram = document.getElementById('Edit_laptop_ram').value;
+    let imgurl = document.getElementById('Edit_laptop_imgurl').value;
+
+    if(brand == "dell"){
+        brand = 1;
+    }else if(brand == "asus"){
+        brand = 2;
+    }else if(brand == "hp"){
+        brand = 3;
+    }else if(brand == "apple"){
+        brand = 4;
+    }else if(brand == "honor"){
+        brand = 5;
+    }else if(brand == "samsung"){
+        brand = 6;
+    }
+
+    let data = new FormData();
+    data.append('laptop_id', laptop_id);
+    data.append('brand', brand);
+    data.append('model', model);
+    data.append('price', price);
+    data.append('amount', amount);
+    data.append('vga', vga);
+    data.append('processor_type', processor_type);
+    data.append('processor', processor);
+    data.append('ram', ram);
+    data.append('imgurl', imgurl);
+
+    axios({
+        "method": "post",
+        "url": "http://localhost/-Full-Stack-E-commerce--back-end-/editlaptop.php",
+        "data": data
+    }).then((result) => {
+        console.log(result)
+        if (result.data.status == "success") {
+            alert("Laptop Edited!")
+            window.location.href = 'admin.html';
+        }
+    }).catch((err) => {
+        console.error(err)
+    });
+}
