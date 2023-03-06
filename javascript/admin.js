@@ -305,4 +305,17 @@ const AddUserToDatabase = () => {
     data.append('phone', phone);
     data.append('address', address);
 
+    axios({
+        "method": "post",
+        "url": "http://localhost/-Full-Stack-E-commerce--back-end-/adduser.php",
+        "data": data
+    }).then((result) => {
+        console.log(result)
+        if (result.data.status == "success") {
+            alert("user added!")
+            window.location.href = 'admin.html';
+        }
+    }).catch((err) => {
+        console.error(err)
+    });
 }
