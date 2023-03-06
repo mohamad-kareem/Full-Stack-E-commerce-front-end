@@ -16,8 +16,6 @@ function signin() {
         console.log(window.sessionStorage.getItem('id'))
         alert("you are signed in")
         window.location.href = 'index.html';
-        
-
     }).catch(function (err) {
         console.log(err);
     })

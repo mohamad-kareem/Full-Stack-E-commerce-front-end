@@ -48,3 +48,7 @@ fetch('http://localhost/-Full-Stack-E-commerce--back-end-/getalllaptops.php')
     container.appendChild(row);
     }            
 });
+
+
+
+

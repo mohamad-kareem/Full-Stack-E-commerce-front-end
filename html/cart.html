@@ -12,29 +12,27 @@
 </head>
 <body>
     <header>
-        <div class="right-side">
-            <div class="logo">
-                <img src="/images/logo.jpg" alt="logo">
+        <div class="navbar">
+            <div class="left">
+              <img id="logo" width=60px height=50px src="../images\logo.jpg">
+              <a id="home">Home</a>
+              <select id="dropdown">
+                <option value="#">Products</option>
+                <option value="laptops.html">Laptops</option>
+                <option value="phones.html">Phones</option>
+                <option value="#">Accesorries</option>
+              </select>
             </div>
-            <nav>
+            <div class="right">
+              <div class="navbar-icons">
                 <ul>
-                <li><a href="#" id="home_link">Home</a></li>
-                <select  id="products">
-                    <option value="">Products</option>
-                    <option value="p1">laptops</option>
-                    <option value="p2">phones</option>
-                    <option value="p3">acc</option>
-                </select>
-            </ul>
-            </nav>
-        </div>
-        <div class="links">
-            <ul>
-                <li><a href="#" class="fa fa-heart-o" style="color: white;"></a></li>
-                <li><a href="#" class="fa fa-shopping-cart" style="color: white;" ></a></li>
-                <li><a href="#" class="fa fa-user-circle-o"style="color: white;"></a></li>
-            </ul>
-        </div>
+                  <li><a href="favorate.html" class="fa fa-heart-o" style="color: white;"></a></li>
+                  <li><a href="cart.html" class="fa fa-shopping-cart" style="color: white;" ></a></li>
+                  <li><a href="profile.html" class="fa fa-user-circle-o"style="color: white;"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
     </header>
       
 
@@ -119,6 +117,6 @@
    
 
 
-    
+    <script src="../javascript/index.js"></script>
 </body>
 </html>

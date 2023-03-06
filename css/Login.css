@@ -1,70 +1,76 @@
+
 body{
-    margin:0px;
-    padding: 0px;
-    font-family: "Roboto";
-}
-select{
-    width:200px;
-    border-radius: 20px;
-    text-align: center;
-    padding:5px;
-    background-color: #337AA6;
-    border-color: #337AA6;
-    color: white;
-    font-weight: 600;
-}
-
-nav {
+    font-family: Roboto;
+    color: #132B40;
+  }
+  .navbar {
     display: flex;
-    align-items: center;
+    flex-direction: row;
     justify-content: space-between;
-    padding: 10px;
+    text-align: center;
     background-color: #337AA6;
-    color: #fff;
-    width:100%;
-    margin:0px;
-}
-
-.navbar-left{
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0% 3%;
+  }
+  
+  img {
+    margin-top: 2%;
+  }
+  
+  .right {
     display: flex;
-}
-
-.navbar-logo img {
-    height: 50px;
-    margin-right:70px;
-    padding:20px;
-}
-
-.navbar-links {
+    text-align: center;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 4px;
+  }
+  
+  #dropdown {
+        color: #132B40;
+        border: none;
+        font-size: 1rem;
+        border-radius: 10px;
+        width: 170px;
+        height: 40px;
+        padding: 5px 5px;
+        cursor: pointer;
+        text-align: center;
+        font-weight: bold;
+        font-family: Roboto;
+        justify-content: center;
+  }
+  
+option {
+cursor: pointer;
+background-color: white;
+ font-weight: bold;
+font-family: Roboto;
+font-size: 0.9rem;
+  }
+  
+.left {
+display: flex;
+ gap: 30px;
+ justify-content: center;
+ align-items: center;
+  }
+  
+#home {
+margin-top: 2px;
+color: white;
+  }
+.navbar-icons ul{
+ display: flex;
+list-style: none;
+justify-content: space-between;
+    }
+.navbar-icons ul a {
     display: flex;
     list-style: none;
     margin: 10px;
     padding: 0;
-}
-
-.navbar-links li {
-    /* margin-right: 20px; */
-    text-decoration: none;
-}
-
-.navbar-links a {
-    color: #fff;
-    text-decoration: none;
-    /* margin-right: 50px; */
-    align-items: center;
-}
-
-.navbar-icons {
-    display: flex;
-    margin-right:50px;
-    list-style: none;
-}
-
-.navbar-icons a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 20px;
-}
+    }
 
 
 .Login-block{
