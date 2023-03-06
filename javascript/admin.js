@@ -162,6 +162,7 @@ const PrintLaptopInTable = (laptop) => {
     AddThisElementToRow(new_row, laptop.ram);
 }
 
+// Start of manipulating sections
 
 // For manipulating users
 
@@ -282,3 +283,7 @@ for(let i=0; i<remove_users_buttons.length; i++) {
 for(let i=0; i<edit_users_buttons.length; i++) {
     edit_laptops_buttons[i].addEventListener("click", ToggleEditlaptopInterface );
 }
+
+// end of manipulating sections
+
+
