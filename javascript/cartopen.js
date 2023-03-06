@@ -52,6 +52,7 @@ for (let i = 0; i < cartItems.length; i++) {
 let totalRow = document.createElement('tr');
 let totalLabelCell = document.createElement('th');
 totalLabelCell.innerText = 'Total';
+
 let totalCell = document.createElement('th');
 totalCell.innerText = '$' + total.toFixed(2);
 totalRow.appendChild(totalLabelCell);
