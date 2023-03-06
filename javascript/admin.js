@@ -365,3 +365,55 @@ const AddPhoneToDatabase = () => {
         console.error(err)
     });
 }
+
+
+const AddlaptopToDatabase = () => {
+    let brand = document.getElementById('Add_laptop_brand').value;
+    let model = document.getElementById('Add_laptop_model').value;
+    let price = document.getElementById('Add_laptop_price').value;
+    let amount = document.getElementById('Add_laptop_amount').value;
+    let vga = document.getElementById('Add_laptop_vga').value;
+    let processor_type = document.getElementById('Add_laptop_processor_type').value;
+    let processor = document.getElementById('Add_laptop_processor').value;
+    let ram = document.getElementById('Add_laptop_ram').value;
+    let imgurl = document.getElementById('Add_laptop_imgurl').value;
+
+    if(brand == "dell"){
+        brand = 1;
+    }else if(brand == "asus"){
+        brand = 2;
+    }else if(brand == "hp"){
+        brand = 3;
+    }else if(brand == "apple"){
+        brand = 4;
+    }else if(brand == "honor"){
+        brand = 5;
+    }else if(brand == "samsung"){
+        brand = 6;
+    }
+
+    let data = new FormData();
+    data.append('brand', brand);
+    data.append('model', model);
+    data.append('price', price);
+    data.append('amount', amount);
+    data.append('vga', vga);
+    data.append('processor_type', processor_type);
+    data.append('processor', processor);
+    data.append('ram', ram);
+    data.append('imgurl', imgurl);
+
+    axios({
+        "method": "post",
+        "url": "http://localhost/-Full-Stack-E-commerce--back-end-/addlaptop.php",
+        "data": data
+    }).then((result) => {
+        console.log(result)
+        if (result.data.status == "success") {
+            alert("laptop added!")
+            window.location.href = 'admin.html';
+        }
+    }).catch((err) => {
+        console.error(err)
+    });
+}
