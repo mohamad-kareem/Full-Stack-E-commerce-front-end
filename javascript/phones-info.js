@@ -14,10 +14,10 @@ const priceRadio = document.querySelectorAll('input[name="price"]');
                                   break;
                                 }
                               }
-                              function updateShoppingBagIcon(numItems) {
-                                const shoppingBagIcon = document.querySelector('#bag-icon');
-                                shoppingBagIcon.textContent = numItems;
-                            }
+                              //function updateShoppingBagIcon(numItems) {
+                               // const shoppingBagIcon = document.querySelector('#bag-icon');
+                               // shoppingBagIcon.textContent = numItems;
+                            //}
 
 
 
@@ -60,12 +60,23 @@ const priceRadio = document.querySelectorAll('input[name="price"]');
                                     button.style.display='inline-block';
                                     button.style.width='50px';
                                     button.style.borderRadius = '5px';
-                                    let shoppingCart=[];
+                                    //let shoppingCart=[];
                                    
                                     button.addEventListener('click', () => {
-                                         console.log(`Button clicked for item ${data[j].model}`);
-                                         shoppingcart.push(data[j]);
-                                         updateShoppingBagIcon(shoppingCart.length);
+                                         console.log(`The clicked item is: ${data[j].model}`);
+                                          //create an object  representing the item
+                                         const itemToAdd={
+                                          model:data[j].model,
+                                          price:data[j].price,
+                                          imgurl:data[j].imgurl
+                                         };
+                                         //pushing the clicked item into the array 
+                                         cart.push(itemToAdd);
+                                         const shoppingBagIcon=document.querySelector('#bagicon');
+                                         shoppingBagIcon.textContent=cart.length;
+
+                                         //shoppingcart.push(data[j]);
+                                         //updateShoppingBagIcon(shoppingCart.length);
                                              });
                                              
                                              item.appendChild(button);
@@ -93,6 +104,8 @@ const priceRadio = document.querySelectorAll('input[name="price"]');
                             for (let i = 0; i < priceRadio.length; i++) {
                                   priceRadio[i].addEventListener('change', displayItems);
                                 }
+                                
+                                const cart=[];
 
                             // Initial display of all items
                             displayItems();
