@@ -14,6 +14,11 @@ const priceRadio = document.querySelectorAll('input[name="price"]');
                                   break;
                                 }
                               }
+                              function updateShoppingBagIcon(numItems) {
+                                const shoppingBagIcon = document.querySelector('#bag-icon');
+                                shoppingBagIcon.textContent = numItems;
+                            }
+
 
 
                         fetch('http://localhost/-Full-Stack-E-commerce--back-end-/getallphones.php')
@@ -21,6 +26,7 @@ const priceRadio = document.querySelectorAll('input[name="price"]');
                             .then(data => {
                               const container = document.querySelector('#item-container');
                               container.innerHTML = ''; // clear previous items
+                             
 
                               const rowClass = 'item-row';
                               const itemClass = 'item';
@@ -48,20 +54,18 @@ const priceRadio = document.querySelectorAll('input[name="price"]');
                                     const para = document.createElement('paragraph');
                                     para.textContent = `$${data[j].price}`;
                                     item.appendChild(para);
-                                    
-
-
-                                 
-
+                                  
                                     const button = document.createElement('button');
                                     button.textContent = 'Add';
                                     button.style.display='inline-block';
                                     button.style.width='50px';
                                     button.style.borderRadius = '5px';
+                                    let shoppingCart=[];
                                    
                                     button.addEventListener('click', () => {
                                          console.log(`Button clicked for item ${data[j].model}`);
-                                        
+                                         shoppingcart.push(data[j]);
+                                         updateShoppingBagIcon(shoppingCart.length);
                                              });
                                              
                                              item.appendChild(button);
@@ -82,7 +86,8 @@ const priceRadio = document.querySelectorAll('input[name="price"]');
                                   }
                                 container.appendChild(row);
                                 
-                                }            
+                                }   
+                                       
                             });}
 
                             for (let i = 0; i < priceRadio.length; i++) {
