@@ -54,7 +54,7 @@ let totalLabelCell = document.createElement('th');
 totalLabelCell.innerText = 'Total';
 
 let totalCell = document.createElement('th');
-totalCell.innerText = '$' + total.toFixed(2);
+totalCell.innerText = '$'+total.toFixed(2);
 totalRow.appendChild(totalLabelCell);
 totalRow.appendChild(totalCell);
 tableBody.appendChild(totalRow);
