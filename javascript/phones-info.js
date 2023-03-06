@@ -50,18 +50,18 @@ const priceRadio = document.querySelectorAll('input[name="price"]');
             button.style.display='inline-block';
             button.style.width='50px';
             button.style.borderRadius = '5px';
-            //let shoppingCart=[];
+            
                                    
             button.addEventListener('click', () => {
             console.log(`The clicked item is: ${data[j].model}`);
             //create an object  representing the item
-            //const itemToAdd={
-             // model:data[j].model,
-              //price:data[j].price,
-              //imgurl:data[j].imgurl
-             //};
+            const itemToAdd={
+              model:data[j].model,
+              price:data[j].price,
+              imgurl:data[j].imgurl
+             };
               //pushing the clicked item into the array 
-                //cart.push(itemToAdd);
+                cart.push(itemToAdd);
              //const shoppingBagIcon=document.querySelector('#bagicon');
             //shoppingBagIcon.textContent=cart.length;
              });
@@ -92,7 +92,7 @@ const priceRadio = document.querySelectorAll('input[name="price"]');
       priceRadio[i].addEventListener('change', displayItems);
        }
                                 
-     //const cart=[];
+     const cart=[];
 
     // Initial display of all items
     displayItems();
