@@ -484,3 +484,38 @@ const RemovelaptopInDatabaseBasedOnID = () => {
         console.error(err)
     });
 }
+
+// Editing elements in the DB
+
+const EditUserInDatabaseBasedOnID = () => {
+    let user_id = document.getElementById('Edit_user_id').value;
+    let first_name = document.getElementById('Add_user_First_name').value;
+    let last_name = document.getElementById('Add_user_Last_name').value;
+    let email = document.getElementById('Add_user_Email').value;
+    let password = document.getElementById('Add_user_Password').value;
+    let phone = document.getElementById('Add_user_Phone').value;
+    let address = document.getElementById('Add_user_Address').value;
+
+    let data = new FormData();
+    data.append('user_id', user_id);
+    data.append('first_name', first_name);
+    data.append('last_name', last_name);
+    data.append('email', email);
+    data.append('password', password);
+    data.append('phone', phone);
+    data.append('address', address);
+
+    axios({
+        "method": "post",
+        "url": "http://localhost/-Full-Stack-E-commerce--back-end-/edituser.php",
+        "data": data
+    }).then((result) => {
+        console.log(result)
+        if (result.data.status == "success") {
+            alert("User Edited!")
+            window.location.href = 'admin.html';
+        }
+    }).catch((err) => {
+        console.error(err)
+    });
+}
