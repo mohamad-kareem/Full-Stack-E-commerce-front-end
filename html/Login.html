@@ -40,10 +40,18 @@
         <h5 class="Login-description">In order to provide the best customer experience,we require all customers to be logged.hank you.</h5>
         <input id="Email" type="text" name="Email" placeholder="Email Address">
         <input id="Password" type="password" name="Password" placeholder="Password">
-        <div class="Pointing-to-forgetpassword"><a href="#">Forgot Password?</a></div>
+        <p id="Pointing-to-forgetpassword">Forgot password?</p>
         <button id="Signin">Sign In</button>
       </div>
     </div>
+
+  </form>
+  <p id="Pointing-to-forgetpassword">Forgot password?</p>
+  <form id="forgot-password-form" style="display: none;">
+    <p>Please enter your mobile number or email:</p>
+    <input type="text" id="forgot-password-input" placeholder="Mobile number or email">
+    <button type="submit" id="submit-forgot-password">Submit</button>
+  </form>
     <script src="../javascript/login.js"></script>
     <script src="../javascript/gotocart.js"></script>
 
