@@ -423,10 +423,10 @@ const AddlaptopToDatabase = () => {
 // Removing elements from the DB
 
 const RemoveUserInDatabaseBasedOnID = () => {
-    let User_id = document.getElementById('Remove_User_id').value;
+    let user_id = document.getElementById('Remove_User_id').value;
 
     let data = new FormData();
-    data.append('User_id', User_id);
+    data.append('user_id', user_id);
 
     axios({
         "method": "post",
@@ -436,6 +436,27 @@ const RemoveUserInDatabaseBasedOnID = () => {
         console.log(result)
         if (result.data.status == "success") {
             alert("User Removed!")
+            window.location.href = 'admin.html';
+        }
+    }).catch((err) => {
+        console.error(err)
+    });
+}
+
+const RemovePhoneInDatabaseBasedOnID = () => {
+    let phone_id = document.getElementById('Remove_phone_id').value;
+
+    let data = new FormData();
+    data.append('phone_id', phone_id);
+
+    axios({
+        "method": "post",
+        "url": "http://localhost/-Full-Stack-E-commerce--back-end-/removephone.php",
+        "data": data
+    }).then((result) => {
+        console.log(result)
+        if (result.data.status == "success") {
+            alert("Phone Removed!")
             window.location.href = 'admin.html';
         }
     }).catch((err) => {
