@@ -289,6 +289,7 @@ for(let i=0; i<edit_users_buttons.length; i++) {
 
 // Start of button functions
 
+
 const AddUserToDatabase = () => {
     let first_name = document.getElementById('Add_user_First_name').value;
     let last_name = document.getElementById('Add_user_Last_name').value;
@@ -313,6 +314,35 @@ const AddUserToDatabase = () => {
         console.log(result)
         if (result.data.status == "success") {
             alert("user added!")
+            window.location.href = 'admin.html';
+        }
+    }).catch((err) => {
+        console.error(err)
+    });
+}
+
+const AddPhoneToDatabase = () => {
+    let brand = document.getElementById('Add_phone_brand').value;
+    let model = document.getElementById('Add_phone_model').value;
+    let price = document.getElementById('Add_phone_price').value;
+    let amount = document.getElementById('Add_phone_amount').value;
+    let memory = document.getElementById('Add_phone_memory').value;
+
+    let data = new FormData();
+    data.append('brand', brand);
+    data.append('model', model);
+    data.append('price', price);
+    data.append('amount', amount);
+    data.append('memory', memory);
+
+    axios({
+        "method": "post",
+        "url": "http://localhost/-Full-Stack-E-commerce--back-end-/addphone.php",
+        "data": data
+    }).then((result) => {
+        console.log(result)
+        if (result.data.status == "success") {
+            alert("phone added!")
             window.location.href = 'admin.html';
         }
     }).catch((err) => {
