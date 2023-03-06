@@ -55,10 +55,13 @@ option {
   align-items: center;
 }
 
-#home {
+#home ,#login,#reg {
   margin-top: 2px;
   color: white;
+  text-decoration: none;
+  
 }
+
 
 #slideshow {
   position: relative;
