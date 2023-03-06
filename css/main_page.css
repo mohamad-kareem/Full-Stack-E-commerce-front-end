@@ -2,6 +2,7 @@ body{
   font-family: Roboto;
   color: white;
   background-color: #f7f5f5;
+  margin-top: 0;
   
 }
 .navbar {
@@ -13,6 +14,7 @@ body{
   font-size: 1.2rem;
   font-weight: bold;
   padding: 0% 3%;
+  height: 100px;
 }
 
 img {
