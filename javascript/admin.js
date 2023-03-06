@@ -22,6 +22,15 @@ const remove_phones_block = document.getElementById("Remove-phones-block");
 const edit_phones_buttons = document.getElementsByClassName("Edit-phone");
 const edit_phones_block = document.getElementById("Edit-phones-block");
 
+const control_laptops_block = document.getElementById("Control-laptops-block");
+const control_laptops_title = document.getElementById("Control-laptops-title");
+const add_laptops_buttons = document.getElementsByClassName("Add-laptop");
+const add_laptops_block = document.getElementById("Add-laptops-block");
+const remove_laptops_buttons = document.getElementsByClassName("Remove-laptop");
+const remove_laptops_block = document.getElementById("Remove-laptops-block");
+const edit_laptops_buttons = document.getElementsByClassName("Edit-laptop");
+const edit_laptops_block = document.getElementById("Edit-laptops-block");
+
 
 for(let i=0; i< category_buttons.length; i++){
     category_buttons[i].addEventListener("click", () => {
@@ -232,4 +241,44 @@ for(let i=0; i<remove_users_buttons.length; i++) {
 }
 for(let i=0; i<edit_users_buttons.length; i++) {
     edit_phones_buttons[i].addEventListener("click", ToggleEditPhoneInterface );
+}
+
+// For manipulating laptops
+
+const ToggleAddlaptopInterface = () => {
+    DisableEveryTable();
+    control_laptops_block.classList.remove("List-disabled");
+    control_laptops_title.textContent = "Add laptop";
+    add_laptops_block.classList.remove("List-disabled");
+    edit_laptops_block.classList.add("List-disabled");
+    remove_laptops_block.classList.add("List-disabled");
+}
+
+const ToggleRemovelaptopInterface = () => {
+        DisableEveryTable();
+        control_laptops_block.classList.remove("List-disabled");
+        control_laptops_title.textContent = "Remove laptop Based On Id";
+        remove_laptops_block.classList.remove("List-disabled");
+        add_laptops_block.classList.add("List-disabled");
+        edit_laptops_block.classList.add("List-disabled");
+}
+
+const ToggleEditlaptopInterface = () => {
+        DisableEveryTable();
+        control_laptops_block.classList.remove("List-disabled");
+        control_laptops_title.textContent = "Edit laptops Based On Id";
+        edit_laptops_block.classList.remove("List-disabled");
+        remove_laptops_block.classList.add("List-disabled");
+        add_laptops_block.classList.add("List-disabled");
+
+}
+
+for(let i=0; i<add_laptops_buttons.length; i++) {
+    add_laptops_buttons[i].addEventListener("click", ToggleAddlaptopInterface );
+}
+for(let i=0; i<remove_users_buttons.length; i++) {
+    remove_laptops_buttons[i].addEventListener("click", ToggleRemovelaptopInterface );
+}
+for(let i=0; i<edit_users_buttons.length; i++) {
+    edit_laptops_buttons[i].addEventListener("click", ToggleEditlaptopInterface );
 }
