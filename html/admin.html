@@ -219,29 +219,34 @@
                 </div>
                 <div class="Table-list List-disabled" id="Add-laptops-block">
                     <div class="Add-block">
-                        <input id="Add_laptop_First_name" class="Input-for-user" type="text" name="First_name" placeholder="First name" required>
-                        <input id="Add_laptop_Last_name" class="Input-for-user" type="text" name="Last_name" placeholder="Last name" required>
-                        <input id="Add_laptop_Email" class="Input-for-user" type="text" name="Email" placeholder="Email Address" required>
-                        <input id="Add_laptop_Password" class="Input-for-user" type="password" name="Password" placeholder="Password" required>
-                        <input id="Add_laptop_Verify_password" class="Input-for-user" type="password" name="Verify_password" placeholder="Verify Password" required>
+                        <input id="Add_laptop_brand" class="Input-for-user" type="text" name="brand" placeholder="Brand" required>
+                        <input id="Add_laptop_model" class="Input-for-user" type="text" name="model" placeholder="Model" required>
+                        <input id="Add_laptop_price" class="Input-for-user" type="number" name="price" placeholder="Price in $" required>
+                        <input id="Add_laptop_amount" class="Input-for-user" type="number" name="amount" placeholder="Amount" required>
+                        <input id="Add_laptop_vga" class="Input-for-user" type="number" name="vga" placeholder="Vga" required>
+                        <input id="Add_laptop_processor_type" class="Input-for-user" type="text" name="processor_type" placeholder="Processor type" required>
+                        <input id="Add_laptop_processor" class="Input-for-user" type="text" name="processor" placeholder="Processor" required>
+                        <input id="Add_laptop_ram" class="Input-for-user" type="number" name="ram" placeholder="Ram" required>
                         <button id="Add-laptop-button" class="In-block-buttons" onclick="AddlaptopToDatabase()">Add</button>
                     </div>
                 </div>
                 <div class="Table-list List-disabled" id="Edit-laptops-block">
                     <div class="Edit-block">
-                        <input id="Edit_laptop_User_id" class="Input-for-user" type="number" name="User_id" placeholder="ID" required>
-                        <input id="Edit_laptop_First_name" class="Input-for-user" type="text" name="First_name" placeholder="First name" required>
-                        <input id="Edit_laptop_Last_name" class="Input-for-user" type="text" name="Last_name" placeholder="Last name" required>
-                        <input id="Edit_laptop_Email" class="Input-for-user" type="text" name="Email" placeholder="Email Address" required>
-                        <input id="Edit_laptop_Password" class="Input-for-user" type="password" name="Password" placeholder="Password" required>
-                        <input id="Edit_laptop_Phone" class="Input-for-user" type="number" name="Phone" placeholder="xx xxx xxx" required>
-                        <input id="Edit_laptop_Address" class="Input-for-user" type="text" name="Address" placeholder="Address" required>
+                        <input id="Edit_laptop_id" class="Input-for-user" type="number" name="laptop_id" placeholder="Laptop ID" required>
+                        <input id="Edit_laptop_brand" class="Input-for-user" type="text" name="brand" placeholder="Brand" required>
+                        <input id="Edit_laptop_model" class="Input-for-user" type="text" name="model" placeholder="Model" required>
+                        <input id="Edit_laptop_price" class="Input-for-user" type="number" name="price" placeholder="Price in $" required>
+                        <input id="Edit_laptop_amount" class="Input-for-user" type="number" name="amount" placeholder="Amount" required>
+                        <input id="Edit_laptop_vga" class="Input-for-user" type="number" name="vga" placeholder="Vga" required>
+                        <input id="Edit_laptop_processor_type" class="Input-for-user" type="text" name="processor_type" placeholder="Processor type" required>
+                        <input id="Edit_laptop_processor" class="Input-for-user" type="text" name="processor" placeholder="Processor" required>
+                        <input id="Edit_laptop_ram" class="Input-for-user" type="number" name="ram" placeholder="Ram" required>
                         <button id="Edit-laptop-button" class="In-block-buttons" onclick="EditlaptopInDatabaseBasedOnID()">Edit</button>
                     </div>
                 </div>
                 <div class="Table-list List-disabled" id="Remove-laptops-block">
                     <div class="Remove-block">
-                        <input id="Remove_laptop_User_id" class="Input-for-user" type="number" name="First_name" placeholder="ID" required>
+                        <input id="Remove_laptop_id" class="Input-for-user" type="number" name="laptop_id" placeholder="Laptop ID" required>
                         <button id="Remove-laptop-button" class="In-block-buttons" onclick="RemovelaptopInDatabaseBasedOnID()">Remove</button>
                     </div>
                 </div>
