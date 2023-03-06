@@ -5,7 +5,6 @@ const priceRadio = document.querySelectorAll('input[name="price"]');
  // Get the selected price range
    let minPrice = 0;
    let maxPrice = Infinity;
-
     for (let i = 0; i < priceRadio.length; i++) {
       if (priceRadio[i].checked) {
       const priceRange = priceRadio[i].value.split('-');
