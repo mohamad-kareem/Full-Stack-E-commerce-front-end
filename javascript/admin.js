@@ -463,3 +463,24 @@ const RemovePhoneInDatabaseBasedOnID = () => {
         console.error(err)
     });
 }
+
+const RemovelaptopInDatabaseBasedOnID = () => {
+    let laptop_id = document.getElementById('Remove_laptop_id').value;
+
+    let data = new FormData();
+    data.append('laptop_id', laptop_id);
+
+    axios({
+        "method": "post",
+        "url": "http://localhost/-Full-Stack-E-commerce--back-end-/removelaptop.php",
+        "data": data
+    }).then((result) => {
+        console.log(result)
+        if (result.data.status == "success") {
+            alert("Laptop Removed!")
+            window.location.href = 'admin.html';
+        }
+    }).catch((err) => {
+        console.error(err)
+    });
+}
