@@ -11,13 +11,27 @@ function signin() {
 
     axios.post('http://localhost/-Full-Stack-E-commerce--back-end-/login.php', data).then(function (res) {
         console.log(res.data)
-        // window.localStorage.setItem('user_id', res.data.user_id)
-        // window.sessionStorage.setItem('user_id', res.data.user_id)
-        window.sessionStorage.setItem('email', res.data.email);// sessionnnnnn
-        console.log(window.sessionStorage.getItem('email'))
-        alert("you are signed in ")
-        let url = `index.html?email=${email}`;
-        window.location.href = url;
+        if(res.data.response == "logged in"){
+            // window.localStorage.setItem('user_id', res.data.user_id)
+            // window.sessionStorage.setItem('user_id', res.data.user_id)
+            window.sessionStorage.setItem('email', res.data.email);// sessionnnnnn
+            console.log(window.sessionStorage.getItem('email'))
+            alert("you are signed in ")
+            let url = `index.html?email=${email}`;
+            window.location.href = url;
+        }else{
+            axios.post('http://localhost/-Full-Stack-E-commerce--back-end-/checkadmin.php', data).then(function (result) {
+                console.log(result.data.status);
+                if (result.data.status == "success") {
+                    alert("Admin signed in!")
+                    window.location.href = 'admin.html';
+                }else{
+                    alert("Wrong email or password!");
+                }
+            }).catch(function (err) {
+                console.log(err);
+            });
+        }
     }).catch(function (err) {
         console.log(err);
     });
@@ -27,6 +41,8 @@ function signin() {
     //     if (result.data.status == "success") {
     //         alert("Admin signed in!")
     //         window.location.href = 'admin.html';
+    //     }else{
+    //         alert("Wrong email or password!");
     //     }
     // }).catch(function (err) {
     //     console.log(err);
