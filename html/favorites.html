@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laptop-page</title>
+    <title>favorites</title>
     <link rel="stylesheet" href="../css/laptops.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/cart.css">
@@ -26,7 +26,7 @@
             <div class="right">
               <div class="navbar-icons">
                 <ul>
-                  <li><a href="favorate.html" class="fa fa-heart-o" style="color: white;"></a></li>
+                  <li><a id="fav" class="fa fa-heart-o" style="color: white;"></a></li>
                   <li><a  id="c" class="fa fa-shopping-cart" style="color: white;" ></a></li>
                   <li><a href="profile.html" class="fa fa-user-circle-o"style="color: white;"></a></li>
                 </ul>
@@ -37,7 +37,7 @@
       
 
     <div class="cart-title">
-        <h1>MY Starforge Cart</h1>
+        <h1>MY Favorites</h1>
         <a href="index.html">Continue Shopping</a>
     </div>
     
@@ -50,34 +50,12 @@
                 <th></th>
               </tr>
             </thead>
-            <tbody id="cart-items">
+            <tbody id="fav-items">
 
             </tbody>    
           </table>
-          
-          <button id="place-order">Place Order</button>
-          <input type="text" id="shipping-address" width="200px" height="100px" placeholder="Enter Shipping Address">
-          <div>
-          <button id="reset-cart">Reset Cart</button></div>
 
-      
-          <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-          <script>
-            const resetCartButton = document.querySelector('#reset-cart');
-            resetCartButton.addEventListener('click', () => {
-              localStorage.clear();
-              alert('Cart reset successfully!');
-            });
-      
-            const placeOrderButton = document.querySelector('#place-order');
-            placeOrderButton.addEventListener('click', () => {
-              const shippingAddress = document.querySelector('#shipping-address').value;
-              localStorage.clear();
-              alert('Order placed successfully!');
-              window.location.href = "index.html";
-            });
-          </script>
-
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="../javascript/index.js"></script>
     <script src="../javascript/gotocart.js"></script>
     <script src="../javascript/cartopen.js"></script>
