@@ -48,8 +48,17 @@ const priceRadio = document.querySelectorAll('input[name="price"]');
                                     const para = document.createElement('paragraph');
                                     para.textContent = `$${data[j].price}`;
                                     item.appendChild(para);
+                                    
+
+
+                                 
+
                                     const button = document.createElement('button');
                                     button.textContent = 'Add';
+                                    button.style.display='inline-block';
+                                    button.style.width='50px';
+                                    button.style.borderRadius = '5px';
+                                   
                                     button.addEventListener('click', () => {
                                          console.log(`Button clicked for item ${data[j].model}`);
                                         
@@ -58,6 +67,10 @@ const priceRadio = document.querySelectorAll('input[name="price"]');
                                              item.appendChild(button);
                                              const button2 = document.createElement('button');
                                               button2.textContent = 'Save';
+                                              button2.style.display='inline-block';
+                                              button2.style.width = '50px';
+                                              button2.style.borderRadius = '5px';
+                                              
                                               button2.addEventListener('click', () => {
                                              console.log(`Add to Cart button clicked for item ${data[j].model}`);
          
@@ -68,6 +81,7 @@ const priceRadio = document.querySelectorAll('input[name="price"]');
                                     
                                   }
                                 container.appendChild(row);
+                                
                                 }            
                             });}
 
