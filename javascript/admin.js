@@ -187,7 +187,7 @@ const ToggleRemoveUserInterface = () => {
 const ToggleEditUserInterface = () => {
         DisableEveryTable();
         control_users_block.classList.remove("List-disabled");
-        control_users_title.textContent = "Edit User Based On Id";
+        control_users_title.textContent = "Edit User Based On Email";
         edit_users_block.classList.remove("List-disabled");
         remove_users_block.classList.add("List-disabled");
         add_users_block.classList.add("List-disabled");
@@ -487,17 +487,15 @@ const RemovelaptopInDatabaseBasedOnID = () => {
 
 // Editing elements in the DB
 
-const EditUserInDatabaseBasedOnID = () => {
-    let user_id = document.getElementById('Edit_user_id').value;
-    let first_name = document.getElementById('Add_user_First_name').value;
-    let last_name = document.getElementById('Add_user_Last_name').value;
-    let email = document.getElementById('Add_user_Email').value;
-    let password = document.getElementById('Add_user_Password').value;
-    let phone = document.getElementById('Add_user_Phone').value;
-    let address = document.getElementById('Add_user_Address').value;
+const EditUserInDatabaseBasedOnEmail = () => {
+    let first_name = document.getElementById('Edit_user_First_name').value;
+    let last_name = document.getElementById('Edit_user_Last_name').value;
+    let email = document.getElementById('Edit_user_Email').value;
+    let password = document.getElementById('Edit_user_Password').value;
+    let phone = document.getElementById('Edit_user_Phone').value;
+    let address = document.getElementById('Edit_user_Address').value;
 
     let data = new FormData();
-    data.append('user_id', user_id);
     data.append('first_name', first_name);
     data.append('last_name', last_name);
     data.append('email', email);
