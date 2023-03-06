@@ -2,6 +2,7 @@
 body{
     font-family: Roboto;
     color: #132B40;
+    background-color: #f7f5f5;
    
   }
   .navbar {
@@ -86,6 +87,8 @@ justify-content: space-between;
   box-shadow: -5px -5px 15px #337AA6,
   5px 5px 15px #337AA6;
   width:fit-content;
+ 
+  margin-top: 50px;
 }
 .Login-block{
   display: flex;
@@ -133,4 +136,7 @@ justify-content: space-between;
     color: black;
     font-size: 20px;
     cursor: pointer;
+}
+#Signin:hover{
+  transform: scale(1.2);
 }

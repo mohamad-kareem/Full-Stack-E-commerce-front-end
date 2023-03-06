@@ -2,6 +2,7 @@
 body{
     font-family: Roboto;
     color: #132B40;
+    background-color: #f7f5f5;
   }
   .navbar {
     display: flex;
@@ -73,7 +74,24 @@ justify-content: space-between;
     padding: 0;
     }
 
+
 .Register-block{
+  border: 10px solid #337AA6;
+  border-radius: 30px;
+  transition: all 0.1s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: -5px -5px 15px #337AA6,
+  5px 5px 15px #337AA6;
+  width:fit-content;
+  padding-left:10px ;
+  padding-right: 10px;
+  
+
+}
+.con-reg{
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -97,26 +115,26 @@ justify-content: space-between;
 #Email, #Password, #Verify_password, #Last_name, #First_name  {
     border: 0;
     border-bottom: 2px solid black;
-    width: 30%;
+    width: 80%;
     height: 50px;
-    margin-top: 50px;
+    margin-top: 25px;
 }
 
 .Pointing-to-forgetpassword{
     width: 30%;
-    font-size: 12px;
+    font-size: 15px;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-.Signin-button{
+#Signup-button{
     background-color: #337AA6;
-    margin-top: 50px;
+    margin-top: 30px;
     border: none;
     border-radius: 10px;
     width: 100px;
-    height: 50px;
+    height: 40px;
     color: white;
     font-size: 20px;
     cursor: pointer;

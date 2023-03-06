@@ -3,6 +3,7 @@
 body{
   font-family: Roboto;
   color: #132B40;
+  background-color: #f7f5f5;
 }
 .navbar {
   display: flex;
@@ -180,6 +181,13 @@ footer {
 
 .container2 .rw1 li{
   list-style: none;
+}
+#logo2{
+  height: 80px;
+  width: 180px;
+  margin-top: 20px;
+  border-radius: 20px;
+  
 }
 #item-container {
   display: flex;

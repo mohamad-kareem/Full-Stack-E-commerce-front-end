@@ -2,6 +2,7 @@
 body{
     font-family: Roboto;
     color: #132B40;
+    background-color: #f7f5f5;
   }
   .navbar {
     display: flex;
