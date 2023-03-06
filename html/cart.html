@@ -27,7 +27,7 @@
               <div class="navbar-icons">
                 <ul>
                   <li><a href="favorate.html" class="fa fa-heart-o" style="color: white;"></a></li>
-                  <li><a href="cart.html" class="fa fa-shopping-cart" style="color: white;" ></a></li>
+                  <li><a  id="c" class="fa fa-shopping-cart" style="color: white;" ></a></li>
                   <li><a href="profile.html" class="fa fa-user-circle-o"style="color: white;"></a></li>
                 </ul>
               </div>
@@ -38,85 +38,50 @@
 
     <div class="cart-title">
         <h1>MY Starforge Cart</h1>
-        <a href="laptops.html">Continue Shopping</a>
+        <a href="main-html">Continue Shopping</a>
     </div>
-
+    
     <div class="small-container cart-page" >
         <table>
-            <tr>
-                <th>product</th>
-                <th>quantity</th>
-                <th>sub total</th>
-            </tr>
-            <tr>
-                <td><div class="cart-info">
-                    <img src="../images/asus2.png" alt="image" >
-                    <div>
-                        <p>ASUS</p>
-                        <h3>Lenovo V15 G2 ITL 15.6" Laptop <br> - Intel Core i3-1115G4 - <br> RAM 4GB - SSD 256GB - Intel UHD | 82KB00Y8AK</h3><br>
-                        <button class="remove"id="remove-btn">remove</button>
-                    </div>
-                </div></td>
-                <td><input type="number" value="1"></td>
-                <td>1000$</td>
-            </tr>
-            
-             
-            <tr>
-                <td><div class="cart-info">
-                    <img src="../images/dell3.png" alt="image" >
-                    <div>
-                        <p>DELL</p>
-                        <h3>Lenovo V15 G2 ITL 15.6" Laptop <br> - Intel Core i3-1115G4 - <br> RAM 4GB - SSD 256GB - Intel UHD | 82KB00Y8AK</h3><br>
-                        <button class="remove"id="remove-btn">remove</button>
-                    </div>
-                </div></td>
-                <td><input type="number" value="1"></td>
-                <td>1000$</td>
-            </tr>
-            
+            <thead>
+              <tr>
+                <th>Item ID</th>
+                <th>Price</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="cart-items">
+              <!-- Cart items will be added here dynamically -->
+            </tbody>    
+          </table>
+          
+          <button id="place-order">Place Order</button>
+          <input type="text" id="shipping-address" width="200px" height="100px" placeholder="Enter Shipping Address">
+          <div>
+          <button id="reset-cart">Reset Cart</button></div>
 
-            <tr >
-                <td><div class="cart-info">
-                    <img src="../images/asus3.png" alt="image" >
-                    <div>
-                        <p>ASUS</p>
-                        <h3>Lenovo V15 G2 ITL 15.6" Laptop <br> - Intel Core i3-1115G4 - <br> RAM 4GB - SSD 256GB - Intel UHD | 82KB00Y8AK</h3><br>
-                        <button class="remove" id="remove-btn">remove</button>
-                    </div>
-                </div></td>
-                <td><input type="number" value="1"></td>
-                <td>1000$</td>
-            </tr>
-
-
-        </table>
-        <div class="total-price">
-            <table>
-                <tr>
-                    <td>Sub total</td>
-                    <td>1500$$</td>
-                </tr>
-            
-                <tr>
-                    <td>Total</td>
-                    <td>2000$</td>
-                </tr>
-                
-            </table>
-            
-        </div>
-        <div id="purchase">
-            <button id="purchase-btn">Purchase</button>
-        </div>
-
-
-    </div>
-
-    
-   
-
+      
+          <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+          <script>
+            const resetCartButton = document.querySelector('#reset-cart');
+            resetCartButton.addEventListener('click', () => {
+              localStorage.clear();
+              alert('Cart reset successfully!');
+            });
+      
+            const placeOrderButton = document.querySelector('#place-order');
+            placeOrderButton.addEventListener('click', () => {
+              const shippingAddress = document.querySelector('#shipping-address').value;
+              // Here you should write the code to place the order
+              localStorage.clear();
+              alert('Order placed successfully!');
+              window.location.href = "index.html";
+            });
+          </script>
 
     <script src="../javascript/index.js"></script>
+    <script src="../javascript/gotocart.js"></script>
+    <script src="../javascript/cartopen.js"></script>
+
 </body>
 </html>

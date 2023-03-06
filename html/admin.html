@@ -54,9 +54,9 @@
                 <div class="List-name-and-controls">
                     <div class="List-name">List of Phones</div>
                     <div class="List-controls">
-                        <div class="Buttons" id="Add-phone">Add</div>
-                        <div class="Buttons" id="Edit-phone">Edit</div>
-                        <div class="Buttons" id="Remove-phone">Remove</div>
+                        <div class="Buttons Add-phone">Add</div>
+                        <div class="Buttons Edit-phone">Edit</div>
+                        <div class="Buttons Remove-phone">Remove</div>
                     </div>
                 </div>
                 <div class="Table-list">
@@ -76,9 +76,9 @@
                 <div class="List-name-and-controls">
                     <div class="List-name">List of Laptops</div>
                     <div class="List-controls">
-                        <div class="Buttons" id="Add-laptop">Add</div>
-                        <div class="Buttons" id="Edit-laptop">Edit</div>
-                        <div class="Buttons" id="Remove-laptop">Remove</div>
+                        <div class="Buttons Add-laptop">Add</div>
+                        <div class="Buttons Edit-laptop">Edit</div>
+                        <div class="Buttons Remove-laptop">Remove</div>
                     </div>
                 </div>
                 <div class="Table-list">
@@ -142,33 +142,121 @@
                 </div>
                 <div class="Table-list List-disabled" id="Add-users-block">
                     <div class="Add-block">
-                        <input id="Add_First_name" class="Input-for-user" type="text" name="First_name" placeholder="First name" required>
-                        <input id="Add_Last_name" class="Input-for-user" type="text" name="Last_name" placeholder="Last name" required>
-                        <input id="Add_Email" class="Input-for-user" type="text" name="Email" placeholder="Email Address" required>
-                        <input id="Add_Password" class="Input-for-user" type="password" name="Password" placeholder="Password" required>
-                        <input id="Add_Verify_password" class="Input-for-user" type="password" name="Verify_password" placeholder="Verify Password" required>
-                        <button id="Add-button" class="In-block-buttons" onclick="AddUserToDatabase()">Add</button>
+                        <input id="Add_user_First_name" class="Input-for-user" type="text" name="First_name" placeholder="First name" required>
+                        <input id="Add_user_Last_name" class="Input-for-user" type="text" name="Last_name" placeholder="Last name" required>
+                        <input id="Add_user_Email" class="Input-for-user" type="text" name="Email" placeholder="Email Address" required>
+                        <input id="Add_user_Password" class="Input-for-user" type="password" name="Password" placeholder="Password" required>
+                        <input id="Add_user_Phone" class="Input-for-user" type="number" name="Phone" placeholder="xx xxx xxx" required>
+                        <input id="Add_user_Address" class="Input-for-user" type="text" name="Address" placeholder="Address" required>
+                        <button id="Add-user-button" class="In-block-buttons" onclick="AddUserToDatabase()">Add</button>
                     </div>
                 </div>
                 <div class="Table-list List-disabled" id="Edit-users-block">
                     <div class="Edit-block">
-                        <input id="Edit_User_id" class="Input-for-user" type="number" name="User_id" placeholder="ID" required>
-                        <input id="Edit_First_name" class="Input-for-user" type="text" name="First_name" placeholder="First name" required>
-                        <input id="Edit_Last_name" class="Input-for-user" type="text" name="Last_name" placeholder="Last name" required>
-                        <input id="Edit_Email" class="Input-for-user" type="text" name="Email" placeholder="Email Address" required>
-                        <input id="Edit_Password" class="Input-for-user" type="password" name="Password" placeholder="Password" required>
-                        <input id="Edit_Phone" class="Input-for-user" type="number" name="Phone" placeholder="xx xxx xxx" required>
-                        <input id="Edit_Address" class="Input-for-user" type="text" name="Address" placeholder="Address" required>
-                        <button id="Edit-button" class="In-block-buttons" onclick="EditUserInDatabaseBasedOnID()">Edit</button>
+                        <input id="Edit_user_Email" class="Input-for-user" type="text" name="Email" placeholder="Email Address" required>
+                        <input id="Edit_user_First_name" class="Input-for-user" type="text" name="First_name" placeholder="First name" required>
+                        <input id="Edit_user_Last_name" class="Input-for-user" type="text" name="Last_name" placeholder="Last name" required>
+                        <input id="Edit_user_Password" class="Input-for-user" type="password" name="Password" placeholder="Password" required>
+                        <input id="Edit_user_Phone" class="Input-for-user" type="number" name="Phone" placeholder="xx xxx xxx" required>
+                        <input id="Edit_user_Address" class="Input-for-user" type="text" name="Address" placeholder="Address" required>
+                        <button id="Edit-user-button" class="In-block-buttons" onclick="EditUserInDatabaseBasedOnEmail()">Edit</button>
                     </div>
                 </div>
                 <div class="Table-list List-disabled" id="Remove-users-block">
                     <div class="Remove-block">
-                        <input id="Remove_User_id" class="Input-for-user" type="number" name="First_name" placeholder="ID" required>
-                        <button id="Remove-button" class="In-block-buttons" onclick="RemoveUserInDatabaseBasedOnID()">Remove</button>
+                        <input id="Remove_User_id" class="Input-for-user" type="number" name="user-id" placeholder="User ID" required>
+                        <button id="Remove-user-button" class="In-block-buttons" onclick="RemoveUserInDatabaseBasedOnID()">Remove</button>
                     </div>
                 </div>
             </div>
+
+            <div class="List-block List-disabled" id="Control-phones-block">
+                <div class="List-name-and-controls">
+                    <div class="List-name" id="Control-phones-title">List of phones</div>
+                    <div class="List-controls">
+                        <div class="Buttons Add-phone">Add</div>
+                        <div class="Buttons Edit-phone">Edit</div>
+                        <div class="Buttons Remove-phone">Remove</div>
+                    </div>
+                </div>
+                <div class="Table-list List-disabled" id="Add-phones-block">
+                    <div class="Add-block">
+                        <input id="Add_phone_brand" class="Input-for-user" type="text" name="brand" placeholder="Brand" required>
+                        <input id="Add_phone_model" class="Input-for-user" type="text" name="model" placeholder="Model" required>
+                        <input id="Add_phone_price" class="Input-for-user" type="number" name="price" placeholder="Price in $" required>
+                        <input id="Add_phone_amount" class="Input-for-user" type="number" name="amount" placeholder="Amount" required>
+                        <input id="Add_phone_memory" class="Input-for-user" type="number" name="memory" placeholder="Memory" required>
+                        <input id="Add_phone_imgurl" class="Input-for-user" type="text" name="imgurl" placeholder="Image Url" required>
+                        <button id="Add-phone-button" class="In-block-buttons" onclick="AddPhoneToDatabase()">Add</button>
+                    </div>
+                </div>
+                <div class="Table-list List-disabled" id="Edit-phones-block">
+                    <div class="Edit-block">
+                        <input id="Edit_phone_id" class="Input-for-user" type="number" name="phone_id" placeholder="Phone ID" required>
+                        <input id="Edit_phone_brand" class="Input-for-user" type="text" name="brand" placeholder="Brand" required>
+                        <input id="Edit_phone_model" class="Input-for-user" type="text" name="model" placeholder="Model" required>
+                        <input id="Edit_phone_price" class="Input-for-user" type="number" name="price" placeholder="Price in $" required>
+                        <input id="Edit_phone_amount" class="Input-for-user" type="number" name="amount" placeholder="Amount" required>
+                        <input id="Edit_phone_memory" class="Input-for-user" type="number" name="memory" placeholder="Memory" required>
+                        <input id="Edit_phone_imgurl" class="Input-for-user" type="text" name="imgurl" placeholder="Image Url" required>
+                        <button id="Edit-phone-button" class="In-block-buttons" onclick="EditPhoneInDatabaseBasedOnID()">Edit</button>
+                    </div>
+                </div>
+                <div class="Table-list List-disabled" id="Remove-phones-block">
+                    <div class="Remove-block">
+                        <input id="Remove_phone_id" class="Input-for-user" type="number" name="phone_id" placeholder="Phone ID" required>
+                        <button id="Remove-phone-button" class="In-block-buttons" onclick="RemovePhoneInDatabaseBasedOnID()">Remove</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="List-block List-disabled" id="Control-laptops-block">
+                <div class="List-name-and-controls">
+                    <div class="List-name" id="Control-laptops-title">List of laptops</div>
+                    <div class="List-controls">
+                        <div class="Buttons Add-laptop">Add</div>
+                        <div class="Buttons Edit-laptop">Edit</div>
+                        <div class="Buttons Remove-laptop">Remove</div>
+                    </div>
+                </div>
+                <div class="Table-list List-disabled" id="Add-laptops-block">
+                    <div class="Add-block">
+                        <input id="Add_laptop_brand" class="Input-for-user" type="text" name="brand" placeholder="Brand" required>
+                        <input id="Add_laptop_model" class="Input-for-user" type="text" name="model" placeholder="Model" required>
+                        <input id="Add_laptop_price" class="Input-for-user" type="number" name="price" placeholder="Price in $" required>
+                        <input id="Add_laptop_amount" class="Input-for-user" type="number" name="amount" placeholder="Amount" required>
+                        <input id="Add_laptop_vga" class="Input-for-user" type="text" name="vga" placeholder="Vga ex: 4 GB" required>
+                        <input id="Add_laptop_processor_type" class="Input-for-user" type="text" name="processor_type" placeholder="Processor type" required>
+                        <input id="Add_laptop_processor" class="Input-for-user" type="text" name="processor" placeholder="Processor" required>
+                        <input id="Add_laptop_ram" class="Input-for-user" type="text" name="ram" placeholder="Ram ex: 16 GB" required>
+                        <input id="Add_laptop_imgurl" class="Input-for-user" type="text" name="imgurl" placeholder="Image Url" required>
+                        <button id="Add-laptop-button" class="In-block-buttons" onclick="AddlaptopToDatabase()">Add</button>
+                    </div>
+                </div>
+                <div class="Table-list List-disabled" id="Edit-laptops-block">
+                    <div class="Edit-block">
+                        <input id="Edit_laptop_id" class="Input-for-user" type="number" name="laptop_id" placeholder="Laptop ID" required>
+                        <input id="Edit_laptop_brand" class="Input-for-user" type="text" name="brand" placeholder="Brand" required>
+                        <input id="Edit_laptop_model" class="Input-for-user" type="text" name="model" placeholder="Model" required>
+                        <input id="Edit_laptop_price" class="Input-for-user" type="number" name="price" placeholder="Price in $" required>
+                        <input id="Edit_laptop_amount" class="Input-for-user" type="number" name="amount" placeholder="Amount" required>
+                        <input id="Edit_laptop_vga" class="Input-for-user" type="text" name="vga" placeholder="Vga ex: 4 GB" required>
+                        <input id="Edit_laptop_processor_type" class="Input-for-user" type="text" name="processor_type" placeholder="Processor type" required>
+                        <input id="Edit_laptop_processor" class="Input-for-user" type="text" name="processor" placeholder="Processor" required>
+                        <input id="Edit_laptop_ram" class="Input-for-user" type="text" name="ram" placeholder="Ram ex: 16 GB" required>
+                        <input id="Edit_laptop_imgurl" class="Input-for-user" type="text" name="imgurl" placeholder="Image Url" required>
+                        <button id="Edit-laptop-button" class="In-block-buttons" onclick="EditlaptopInDatabaseBasedOnID()">Edit</button>
+                    </div>
+                </div>
+                <div class="Table-list List-disabled" id="Remove-laptops-block">
+                    <div class="Remove-block">
+                        <input id="Remove_laptop_id" class="Input-for-user" type="number" name="laptop_id" placeholder="Laptop ID" required>
+                        <button id="Remove-laptop-button" class="In-block-buttons" onclick="RemovelaptopInDatabaseBasedOnID()">Remove</button>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
     </div>
     <script src="../javascript/admin.js"></script>

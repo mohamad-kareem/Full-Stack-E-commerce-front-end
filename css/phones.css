@@ -85,7 +85,7 @@ justify-content: space-between;
     border: 2px solid black;
     padding:30px;
     width: 150px;
-    height: 300px;
+    height: 150px;
     margin-left:10px;
     margin-right: 20px;
     margin-top:50px;
@@ -192,15 +192,17 @@ footer {
 #item-container {
   display: flex;
   flex-wrap: wrap;
-  width:800px;
+  width:1000px;
   margin:50px;
 }
 
 .item-row {
   display: flex;
   justify-content: space-between;
+  flex-wrap:wrap;
   margin-bottom: 20px;
 }
+
 
 .item {
   border: 2px solid black;
@@ -215,19 +217,20 @@ footer {
   
 }
 
-.item button{
- display:flex;
- justify-content: space-between;
- 
+.item button:hover {
+  background-color: #3e8e41;
 }
-
 .item img {
   height:150px;
   width:270px;
   margin-bottom: 10px;
   border-radius:10px;
+  object-fit: contain;
 }
-
+button{
+ 
+  margin:2px;
+}
 .item p {
   text-align: center;
 }
