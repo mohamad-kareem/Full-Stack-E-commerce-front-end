@@ -46,10 +46,25 @@ pointingToForgetPassword.addEventListener("click", () => {
     let submit_forget = document.getElementById('submit-forgot-password');
     submit_forget.addEventListener('click', checkemail);
 
-
-
-
-
-
   });
-  
+  function checkemail(){
+    let email = document.getElementById('Email1').value;
+    let data = new FormData();
+    data.append('email', email);
+
+    axios.post('http://localhost/-Full-Stack-E-commerce--back-end-/forgetpassword.php', data).then(function (res) {
+        console.log(res.data)
+        if(res.data.response == "email not found"){
+            console.log(window.sessionStorage.getItem('email'))
+            alert("wrong email")}
+            else{
+            alert("t")
+                
+            }
+        }).catch(function (err) {
+        console.log(err);
+    });
+
+
+}
+
