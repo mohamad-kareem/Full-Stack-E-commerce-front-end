@@ -40,84 +40,35 @@
         <h1>MY Starforge Cart</h1>
         <a href="main-html">Continue Shopping</a>
     </div>
-
+    <button id="checkout-btn">Checkout</button>
+    
     <div class="small-container cart-page" >
         <table>
-            <tr>
-                <th>product</th>
-                <th>quantity</th>
-                <th>sub total</th>
-            </tr>
-            <tbody id="cart-items"></tbody>
-            <tr>
-                <td><div class="cart-info">
-                    <img src="../images/asus2.png" alt="image" >
-                    <div>
-                        <p>ASUS</p>
-                        <h3>Lenovo V15 G2 ITL 15.6" Laptop <br> - Intel Core i3-1115G4 - <br> RAM 4GB - SSD 256GB - Intel UHD | 82KB00Y8AK</h3><br>
-                        <button class="remove"id="remove-btn">remove</button>
-                    </div>
-                </div></td>
-                <td><input type="number" value="1"></td>
-                <td>1000$</td>
-            </tr>
-            
-             
-            <tr>
-                <td><div class="cart-info">
-                    <img src="../images/dell3.png" alt="image" >
-                    <div>
-                        <p>DELL</p>
-                        <h3>Lenovo V15 G2 ITL 15.6" Laptop <br> - Intel Core i3-1115G4 - <br> RAM 4GB - SSD 256GB - Intel UHD | 82KB00Y8AK</h3><br>
-                        <button class="remove"id="remove-btn">remove</button>
-                    </div>
-                </div></td>
-                <td><input type="number" value="1"></td>
-                <td>1000$</td>
-            </tr>
-            
-
-            <tr >
-                <td><div class="cart-info">
-                    <img src="../images/asus3.png" alt="image" >
-                    <div>
-                        <p>ASUS</p>
-                        <h3>Lenovo V15 G2 ITL 15.6" Laptop <br> - Intel Core i3-1115G4 - <br> RAM 4GB - SSD 256GB - Intel UHD | 82KB00Y8AK</h3><br>
-                        <button class="remove" id="remove-btn">remove</button>
-                    </div>
-                </div></td>
-                <td><input type="number" value="1"></td>
-                <td>1000$</td>
-            </tr>
-
-
-        </table>
-        <div class="total-price">
-            <table>
-                <tr>
-                    <td>Sub total</td>
-                    <td>1500$$</td>
-                </tr>
-            
-                <tr>
-                    <td>Total</td>
-                    <td>2000$</td>
-                </tr>
-                
-            </table>
-            
-        </div>
-        <div id="purchase">
-            <button id="purchase-btn">Purchase</button>
-        </div>
-
-
-    </div>
-
+         
+    <tr>
+      <th>Item Name</th>
+      <th>Price</th>
+    </tr>
+  <tbody id="cart-items">
+    <!-- Cart items will be added here dynamically -->
+  </tbody>
+  <tr>
+    <th>Total</th>
+    <th id="total"></th>
+  </tr>
+</table>           
 
     <script src="../javascript/index.js"></script>
     <script src="../javascript/gotocart.js"></script>
-    
+    <script src="../javascript/cartopen.js"></script>
+
+    <script>
+        const checkoutBtn = document.getElementById('checkout-btn');
+        
+        checkoutBtn.addEventListener('click', function() {
+          localStorage.clear();
+        });
+      </script>
 
 </body>
 </html>
