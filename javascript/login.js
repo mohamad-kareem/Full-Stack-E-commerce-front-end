@@ -7,7 +7,7 @@ function signin() {
     let data = new FormData();
     data.append('email', email);
     data.append('password', password);
-
+    
 
     axios.post('http://localhost/-Full-Stack-E-commerce--back-end-/login.php', data).then(function (res) {
         console.log(res.data)
@@ -20,7 +20,17 @@ function signin() {
         window.location.href = url;
     }).catch(function (err) {
         console.log(err);
-    })
+    });
+
+    // axios.post('http://localhost/-Full-Stack-E-commerce--back-end-/checkadmin.php', data).then(function (result) {
+    //     console.log(result.data.status);
+    //     if (result.data.status == "success") {
+    //         alert("Admin signed in!")
+    //         window.location.href = 'admin.html';
+    //     }
+    // }).catch(function (err) {
+    //     console.log(err);
+    // });
 
 }
 
