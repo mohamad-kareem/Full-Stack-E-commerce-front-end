@@ -327,6 +327,21 @@ const AddPhoneToDatabase = () => {
     let price = document.getElementById('Add_phone_price').value;
     let amount = document.getElementById('Add_phone_amount').value;
     let memory = document.getElementById('Add_phone_memory').value;
+    let imgurl = document.getElementById('Add_phone_imgurl').value;
+
+    if(brand == "dell"){
+        brand = 1;
+    }else if(brand == "asus"){
+        brand = 2;
+    }else if(brand == "hp"){
+        brand = 3;
+    }else if(brand == "apple"){
+        brand = 4;
+    }else if(brand == "honor"){
+        brand = 5;
+    }else if(brand == "samsung"){
+        brand = 6;
+    }
 
     let data = new FormData();
     data.append('brand', brand);
@@ -334,6 +349,7 @@ const AddPhoneToDatabase = () => {
     data.append('price', price);
     data.append('amount', amount);
     data.append('memory', memory);
+    data.append('imgurl', imgurl);
 
     axios({
         "method": "post",
