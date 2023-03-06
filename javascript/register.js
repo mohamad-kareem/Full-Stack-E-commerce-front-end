@@ -24,6 +24,8 @@ function signup() {
         console.log(result)
         if (result.data.status == "success") {
             alert("signed up")
+            window.location.href = 'index.html';
+
         }
     }).catch((err) => {
         console.error(err)
