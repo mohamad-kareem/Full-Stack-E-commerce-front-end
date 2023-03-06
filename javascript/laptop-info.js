@@ -5,7 +5,7 @@ fetch('http://localhost/-Full-Stack-E-commerce--back-end-/getalllaptops.php')
   const rowClass = 'item-row';
   const itemClass = 'item';
 
-  let b = 1; // Initialize the counter
+  let b = 1; 
 
   for (let i = 0; i < data.length; i += 3) {
     const row = document.createElement('div');
