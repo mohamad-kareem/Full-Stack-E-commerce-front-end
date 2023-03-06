@@ -1,7 +1,5 @@
-
-let signin_btn = document.getElementById('Signin')
+let signin_btn = document.getElementById('Signin');
 signin_btn.addEventListener('click', signin);
-
 
 function signin() {
     let email = document.getElementById('Email').value;
@@ -9,15 +7,19 @@ function signin() {
     let data = new FormData();
     data.append('email', email);
     data.append('password', password);
-    axios.post('http://localhost/-Full-Stack-E-commerce--back-end-/login.php', data).then(function (res) {
-        console.log(res.data)
-        // window.localStorage.setItem('user_id', res.data.user_id)
-        // window.sessionStorage.setItem('user_id', res.data.user_id)
-        console.log(window.sessionStorage.getItem('id'))
-        alert("you are signed in")
-        window.location.href = 'index.html';
-    }).catch(function (err) {
-        console.log(err);
-    })
-
+    axios.post('http://localhost/-Full-Stack-E-commerce--back-end-/login.php', data)
+        .then(function (res) {
+            console.log(res.data);
+            console.log(window.sessionStorage.getItem('id'));
+            
+            if (res.data.response === "email not found") {
+                alert("Email not found. Please try again.");
+            } else if (res.data.response === "Incorrect password") {
+                alert("Incorrect password. Please try again.");
+            } else {
+            }
+        })
+        .catch(function (err) {
+            console.log(err);
+        });
 }

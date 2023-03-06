@@ -24,6 +24,7 @@ function signup() {
         console.log(result)
         if (result.data.status == "success") {
             alert("signed up")
+            
         }
     }).catch((err) => {
         console.error(err)
