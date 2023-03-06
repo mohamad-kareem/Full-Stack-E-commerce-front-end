@@ -47,11 +47,11 @@ To learn about APIs and MySQL and implement this knowledge in a full stack ecomm
 
 To run this project you just have to do these simple steps:
 
-1 - download [Xampp](https://www.apachefriends.org/download.html)
-2 - git clone this repository ( This is the front end of the website ) in the xampp/htdocs folder
-3 - git clone the [backend](https://github.com/mohamad-kareem/-Full-Stack-E-commerce--back-end-) of the website in the xampp/htdocs folder
-4 - Download the following DataBase (On hold) [^1]
-5 - start the xampp server (Apache and MySQL)
-6 - the website is now online, you can open the website with the index.html
+1. download [Xampp](https://www.apachefriends.org/download.html)
+2. git clone this repository ( This is the front end of the website ) in the xampp/htdocs folder
+3. git clone the [backend](https://github.com/mohamad-kareem/-Full-Stack-E-commerce--back-end-) of the website in the xampp/htdocs folder
+4. Download the following DataBase (On hold) [^1]
+5. start the xampp server (Apache and MySQL)
+6. the website is now online, you can open the website with the index.html
 
 [^1]: The Database link will be available after the presentation day
